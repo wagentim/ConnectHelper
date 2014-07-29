@@ -1,5 +1,6 @@
 package cn.wagentim.connecthelper.core;
 
+import cn.wagentim.basicutils.BasicUtils;
 import cn.wagentim.basicutils.StringConstants;
 import de.wagentim.qlogger.channel.DefaultChannel;
 import de.wagentim.qlogger.channel.LogChannel;
@@ -8,28 +9,14 @@ import de.wagentim.qlogger.service.QLoggerService;
 
 public final class ConnectManager
 {
-	private IConnectConfigure configure = null;
+	private static final LogChannel logger = QLoggerService.getChannel(QLoggerService.addChannel(new DefaultChannel("ConnectHelper")));
 
-	private LogChannel logger = QLoggerService.getChannel(QLoggerService.addChannel(new DefaultChannel("ConnectHelper")));
-
-	public ConnectManager()
+	public static final String getContent(final IConnectConfigure configure)
 	{
-	}
-
-	public ConnectManager(IConnectConfigure configure)
-	{
-		this.configure = configure;
-	}
-
-	public final String getContent()
-	{
-		logger.log( Log.LEVEL_INFO, "ConnectManager#getContent: URL: %1; User Name: %2; password: %3 " );
-
-		if( null != configure )
+		if( !BasicUtils.isNull(configure) )
 		{
-			logger.log(Log.LEVEL_INFO, "Using %1 to get web content", this.configure.getClass().getName());
+			logger.log(Log.LEVEL_INFO, "Try to get contents from Website: %1", configure.getWebsiteName());
 		}
-
 		return StringConstants.EMPTY_STRING;
 	}
 
@@ -38,8 +25,4 @@ public final class ConnectManager
 		return logger;
 	}
 
-	public void udpateConnectConfigure(IConnectConfigure configure)
-	{
-		this.configure = configure;
-	}
 }

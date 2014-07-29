@@ -17,4 +17,17 @@ public class StandardConnectConfigure implements IConnectConfigure
 		this.website = website;
 	}
 
+	@Override
+	public String getWebsiteName() 
+	{
+		return null;
+	}
+
+	@Override
+	public String getURL() 
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
