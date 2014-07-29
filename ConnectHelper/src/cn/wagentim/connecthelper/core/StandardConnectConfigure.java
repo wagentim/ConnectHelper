@@ -1,5 +1,7 @@
 package cn.wagentim.connecthelper.core;
 
+import cn.wagentim.connecthelper.webs.WebSite;
+
 /**
  * Standard Connect Configure will be used to fetch standard web site content
  *
@@ -8,12 +10,11 @@ package cn.wagentim.connecthelper.core;
  */
 public class StandardConnectConfigure implements IConnectConfigure
 {
+	private final WebSite website;
 
-	@Override
-	public String getWebContent(String url, String userName, String password)
+	public StandardConnectConfigure(final WebSite website)
 	{
-		// TODO Auto-generated method stub
-		return null;
+		this.website = website;
 	}
 
 }

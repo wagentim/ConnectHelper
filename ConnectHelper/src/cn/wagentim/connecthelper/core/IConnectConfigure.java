@@ -2,5 +2,7 @@ package cn.wagentim.connecthelper.core;
 
 public interface IConnectConfigure
 {
-	String getWebContent(String url, String userName, String password);
+	public static final int STANDARD = 0x00;
+	public static final int USER_LOGIN = 0x01;
+
 }

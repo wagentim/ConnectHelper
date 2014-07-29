@@ -21,14 +21,13 @@ public final class ConnectManager
 		this.configure = configure;
 	}
 
-	public final String getContent(final String url, final String userName, final String password)
+	public final String getContent()
 	{
-		logger.log( Log.LEVEL_INFO, "ConnectManager#getContent: URL: %1; User Name: %2; password: %3 ", url, userName, password );
+		logger.log( Log.LEVEL_INFO, "ConnectManager#getContent: URL: %1; User Name: %2; password: %3 " );
 
 		if( null != configure )
 		{
 			logger.log(Log.LEVEL_INFO, "Using %1 to get web content", this.configure.getClass().getName());
-			return configure.getWebContent(url, userName, password);
 		}
 
 		return StringConstants.EMPTY_STRING;
