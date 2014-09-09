@@ -20,7 +20,7 @@ import de.wagentim.qlogger.channel.LogChannel;
 import de.wagentim.qlogger.service.QLoggerService;
 
 
-public final class ConnectManager
+public final class ConnectManager implements URLType
 {
 	private static final PoolingHttpClientConnectionManager poolingManager;
 	private static final CloseableHttpClient httpClient;
@@ -33,29 +33,86 @@ public final class ConnectManager
 		logger = QLoggerService.getChannel(QLoggerService.addChannel(new DefaultChannel("ConnectManager")));
 	}
 
-	public static String standardGet(final String url)
+	public static Object standardGet(final String url)
 	{
-		GetStandardContentAsStringThread gt = new GetStandardContentAsStringThread(httpClient, new HttpGet(url));
-		gt.start();
-		try
+		int type = analyzeURL(url);
+		Thread getThread;
+		
+		switch(type)
 		{
-			gt.join();
-		} catch (InterruptedException e)
-		{
-			e.printStackTrace();
+			case URLType.TYPE_PAGE:
+				getThread = new GetStandardWebPageContentAsStringThread(httpClient, new HttpGet(url));
+				break;
+				
+			case URLType.TYPE_DATA:
+				break;
+				
+			default:
+				break;
 		}
-
-		return gt.getContent();
+		
+		if( null != getThread )
+		{
+			getThread.start();
+			
+			try
+			{
+				getThread.join();
+			} catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	private static int analyzeURL(String url)
+	{
+		StringBuffer sb = new StringBuffer(url);
+		
+		// check if the URL ended with "/", then we just try to get the web page content
+		char lastChar = sb.charAt(sb.length() - 1);
+		if( StringConstants.CHAR_SLASH == lastChar )
+		{
+			return URLType.TYPE_PAGE;
+		}
+		
+		int dot = sb.lastIndexOf(StringConstants.DOT);
+		
+		// if there is no 
+		if( dot < 0 )
+		{
+			return URLType.TYPE_PAGE;
+		}
+		
+		String extension = sb.substring(dot+1);
+		
+		// it means the URL is ended with a link, not a data
+		if( extension.length() < 3 )
+		{
+			return URLType.TYPE_PAGE;
+		}
+		else if( isSupportedFileType(extension) )
+		{
+			return URLType.TYPE_DATA;
+		}
+		
+		return URLType.TYPE_UNKNOWN;
 	}
 
-	static class GetStandardContentAsStringThread extends Thread
+	private static boolean isSupportedFileType(String extension)
+	{
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	static class GetStandardWebPageContentAsStringThread extends Thread
 	{
 		private final CloseableHttpClient httpClient;
 		private final HttpContext context;
 		private final HttpGet httpget;
 		private String content = StringConstants.EMPTY_STRING;
 
-		public GetStandardContentAsStringThread(CloseableHttpClient httpClient,
+		public GetStandardWebPageContentAsStringThread(CloseableHttpClient httpClient,
 				HttpGet httpget)
 		{
 			this.httpClient = httpClient;
@@ -72,7 +129,6 @@ public final class ConnectManager
 						context);
 				try
 				{
-
 					if (response.getStatusLine().getStatusCode() < 300)
 					{
 						HttpEntity entity = response.getEntity();
@@ -80,7 +136,8 @@ public final class ConnectManager
 								.getOrDefault(entity).getCharset());
 						EntityUtils.consume(entity);
 					}
-				} finally
+				} 
+				finally
 				{
 					response.close();
 				}
