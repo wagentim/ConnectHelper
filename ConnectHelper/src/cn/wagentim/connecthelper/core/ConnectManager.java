@@ -15,17 +15,22 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
 import cn.wagentim.basicutils.StringConstants;
+import de.wagentim.qlogger.channel.DefaultChannel;
+import de.wagentim.qlogger.channel.LogChannel;
+import de.wagentim.qlogger.service.QLoggerService;
 
 
 public final class ConnectManager
 {
 	private static final PoolingHttpClientConnectionManager poolingManager;
 	private static final CloseableHttpClient httpClient;
+	public static final LogChannel logger;
 
 	static
 	{
 		poolingManager = new PoolingHttpClientConnectionManager();
 		httpClient = HttpClients.custom().setConnectionManager(poolingManager).build();
+		logger = QLoggerService.getChannel(QLoggerService.addChannel(new DefaultChannel("ConnectManager")));
 	}
 
 	public static String standardGet(final String url)
@@ -50,7 +55,8 @@ public final class ConnectManager
 		private final HttpGet httpget;
 		private String content = StringConstants.EMPTY_STRING;
 
-		public GetStandardContentAsStringThread(CloseableHttpClient httpClient, HttpGet httpget)
+		public GetStandardContentAsStringThread(CloseableHttpClient httpClient,
+				HttpGet httpget)
 		{
 			this.httpClient = httpClient;
 			this.context = HttpClientContext.create();
@@ -58,32 +64,38 @@ public final class ConnectManager
 		}
 
 		@Override
-	    public void run() {
-	        try {
-	            CloseableHttpResponse response = httpClient.execute(
-	                    httpget, context);
-	            try {
+		public void run()
+		{
+			try
+			{
+				CloseableHttpResponse response = httpClient.execute(httpget,
+						context);
+				try
+				{
 
-	            	if( response.getStatusLine().getStatusCode() < 300 )
-	            	{
-	            		HttpEntity entity = response.getEntity();
-	            		content = EntityUtils.toString(entity, ContentType.getOrDefault(entity).getCharset());
-	            		EntityUtils.consume(entity);
-	            	}
-	            } finally {
-	                response.close();
-	            }
-	        } catch (ClientProtocolException ex) {
-	            // Handle protocol errors
-	        } catch (IOException ex) {
-	            // Handle I/O errors
-	        }
-	    }
+					if (response.getStatusLine().getStatusCode() < 300)
+					{
+						HttpEntity entity = response.getEntity();
+						content = EntityUtils.toString(entity, ContentType
+								.getOrDefault(entity).getCharset());
+						EntityUtils.consume(entity);
+					}
+				} finally
+				{
+					response.close();
+				}
+			} catch (ClientProtocolException ex)
+			{
+				// Handle protocol errors
+			} catch (IOException ex)
+			{
+				// Handle I/O errors
+			}
+		}
 
 		public String getContent()
 		{
 			return content;
 		}
-
 	}
 }
