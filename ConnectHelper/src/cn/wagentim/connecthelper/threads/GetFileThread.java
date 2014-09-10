@@ -1,14 +1,22 @@
 package cn.wagentim.connecthelper.threads;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.protocol.HttpContext;
+import org.apache.http.util.EntityUtils;
+
+import cn.wagentim.connecthelper.utils.SelfList;
 
 public class GetFileThread extends AbstractThread
 {
@@ -18,7 +26,7 @@ public class GetFileThread extends AbstractThread
 	private final HttpGet httpget;
 	private File content = null;
 
-	private List<IProcessListener> listeners = null;
+	private List<IDownloadListener> listeners = null;
 
 	public GetFileThread(
 			CloseableHttpClient httpClient, HttpGet httpget)
@@ -28,38 +36,60 @@ public class GetFileThread extends AbstractThread
 		this.httpget = httpget;
 	}
 
-	public void addListener(IProcessListener listener)
+	public void addListener(IDownloadListener listener)
 	{
 		if( null == listeners )
 		{
-			listeners = new ArrayList<IProcessListener>();
-			listeners.add(listener);
-			return;
-		}
-
-		Iterator<IProcessListener> it = listeners.iterator();
-
-		while(it.hasNext())
-		{
-			IProcessListener item = it.next();
-
-			if( item == listener )
-			{
-				return;
-			}
+			listeners = new SelfList<IDownloadListener>();
 		}
 
 		listeners.add(listener);
 	}
 
-	public void removeListener(IProcessListener listener)
+	public void removeListener(IDownloadListener listener)
 	{
 
+	}
+	
+	public void releaseListeners()
+	{
+		listeners.clear();
 	}
 
 	public void run()
 	{
-
+		try
+		{
+			CloseableHttpResponse response = httpClient.execute(httpget,
+					context);
+			try
+			{
+				if (response.getStatusLine().getStatusCode() < 300)
+				{
+					HttpEntity entity = response.getEntity();
+					long fileSize = entity.getContentLength();
+					if( fileSize > 0 )
+					{
+						
+					}
+					else
+					{
+						
+					}
+					EntityUtils.consume(entity);
+				}
+			} finally
+			{
+				response.close();
+			}
+			
+		} catch (ClientProtocolException ex)
+		{
+			// Handle protocol errors
+		} catch (IOException ex)
+		{
+			// Handle I/O errors
+		}
 	}
 
 	@Override
