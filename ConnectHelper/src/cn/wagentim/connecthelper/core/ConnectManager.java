@@ -7,7 +7,9 @@ import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 
 import cn.wagentim.basicutils.StringConstants;
 import cn.wagentim.connecthelper.threads.AbstractThread;
+import cn.wagentim.connecthelper.threads.GetFileThread;
 import cn.wagentim.connecthelper.threads.GetStandardWebPageContentAsStringThread;
+import cn.wagentim.connecthelper.threads.ICallback;
 import de.wagentim.qlogger.channel.DefaultChannel;
 import de.wagentim.qlogger.channel.LogChannel;
 import de.wagentim.qlogger.service.QLoggerService;
@@ -34,7 +36,7 @@ public final class ConnectManager implements URLType
 		char lastChar = sb.charAt(sb.length() - 1);
 		if( StringConstants.CHAR_SLASH == lastChar )
 		{
-			return URLType.TYPE_PAGE;
+			return URLType.TYPE_STANDARD_PAGE;
 		}
 
 		int dot = sb.lastIndexOf(StringConstants.DOT);
@@ -42,7 +44,7 @@ public final class ConnectManager implements URLType
 		// if there is no
 		if( dot < 0 )
 		{
-			return URLType.TYPE_PAGE;
+			return URLType.TYPE_STANDARD_PAGE;
 		}
 
 		String extension = sb.substring(dot+1);
@@ -50,11 +52,11 @@ public final class ConnectManager implements URLType
 		// it means the URL is ended with a link, not a data
 		if( extension.length() < 3 )
 		{
-			return URLType.TYPE_PAGE;
+			return URLType.TYPE_STANDARD_PAGE;
 		}
 		else if( isSupportedFileType(extension) )
 		{
-			return URLType.TYPE_DATA;
+			return URLType.TYPE_STANDARD_DATA;
 		}
 
 		return URLType.TYPE_UNKNOWN;
@@ -66,21 +68,30 @@ public final class ConnectManager implements URLType
 		return false;
 	}
 
-	public static String getWebPage(String startURL)
+	/**
+	 * Get URL resource. It will be handled by different handlers, that a defined by type
+	 * 
+	 * @param url the resource location
+	 * @param type	the required resource type
+	 * @return	Object required object
+	 */
+	public static void getRequiredData(final String url, final int type, final ICallback callback)
 	{
-		AbstractThread thread = new GetStandardWebPageContentAsStringThread(httpClient, new HttpGet(startURL));
-
+		AbstractThread thread = getRequiredThread(type, url);
+		thread.setCallback(callback);
 		thread.start();
-		try
+	}
+
+	private static AbstractThread getRequiredThread(final int type, final String url)
+	{
+		switch(type)
 		{
-			thread.join();
-		} catch (InterruptedException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			case URLType.TYPE_STANDARD_PAGE:
+				return new GetStandardWebPageContentAsStringThread(httpClient, new HttpGet(url));
+			case URLType.TYPE_STANDARD_DATA:
+				return new GetFileThread(httpClient, new HttpGet(url));
+			default:
+				return null;
 		}
-
-		return (String) thread.getResult();
-
 	}
 }

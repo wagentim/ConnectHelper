@@ -2,5 +2,10 @@ package cn.wagentim.connecthelper.threads;
 
 public abstract class AbstractThread extends Thread
 {
-	public abstract Object getResult();
+	protected ICallback callback = null;
+	
+	public void setCallback(ICallback callback)
+	{
+		this.callback = callback;
+	}
 }

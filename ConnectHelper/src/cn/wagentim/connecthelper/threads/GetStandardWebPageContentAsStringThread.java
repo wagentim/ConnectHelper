@@ -12,8 +12,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
-import cn.wagentim.basicutils.StringConstants;
-
 /**
  * Get standard web page source code
  *
@@ -25,7 +23,6 @@ public class GetStandardWebPageContentAsStringThread extends AbstractThread
 	private final CloseableHttpClient httpClient;
 	private final HttpContext context;
 	private final HttpGet httpget;
-	private String content = StringConstants.EMPTY_STRING;
 
 	public GetStandardWebPageContentAsStringThread(
 			CloseableHttpClient httpClient, HttpGet httpget)
@@ -47,9 +44,14 @@ public class GetStandardWebPageContentAsStringThread extends AbstractThread
 				if (response.getStatusLine().getStatusCode() < 300)
 				{
 					HttpEntity entity = response.getEntity();
-					content = EntityUtils.toString(entity, ContentType
+					String content = EntityUtils.toString(entity, ContentType
 							.getOrDefault(entity).getCharset());
 					EntityUtils.consume(entity);
+					
+					if( null != callback)
+					{
+						callback.requestFinished(content);
+					}
 				}
 			} finally
 			{
@@ -63,11 +65,4 @@ public class GetStandardWebPageContentAsStringThread extends AbstractThread
 			// Handle I/O errors
 		}
 	}
-
-	@Override
-	public Object getResult()
-	{
-		return content;
-	}
-
 }
