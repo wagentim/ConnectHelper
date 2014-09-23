@@ -12,6 +12,10 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
+import de.wagentim.qlogger.channel.DefaultChannel;
+import de.wagentim.qlogger.channel.LogChannel;
+import de.wagentim.qlogger.service.QLoggerService;
+
 /**
  * Get standard web page source code
  *
@@ -23,6 +27,7 @@ public class GetStandardWebPageContentAsStringThread extends AbstractThread
 	private final CloseableHttpClient httpClient;
 	private final HttpContext context;
 	private final HttpGet httpget;
+	private LogChannel logger = QLoggerService.getChannel(QLoggerService.addChannel(new DefaultChannel("STD_PAGE")));
 
 	public GetStandardWebPageContentAsStringThread(
 			CloseableHttpClient httpClient, HttpGet httpget)
@@ -46,12 +51,8 @@ public class GetStandardWebPageContentAsStringThread extends AbstractThread
 					HttpEntity entity = response.getEntity();
 					String content = EntityUtils.toString(entity, ContentType
 							.getOrDefault(entity).getCharset());
+					notifyProcessFinished(content);
 					EntityUtils.consume(entity);
-					
-					if( null != callback)
-					{
-						callback.requestFinished(content);
-					}
 				}
 			} finally
 			{
