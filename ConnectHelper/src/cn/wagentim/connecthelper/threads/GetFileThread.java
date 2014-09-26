@@ -54,13 +54,16 @@ public class GetFileThread extends AbstractThread
 					{
 						logger.log(Log.LEVEL_INFO, "Data Size is 1% and will be downloaded to 2% with the name 3%", String.valueOf(fileSize), filePath, fileName);
 						InputStream is = entity.getContent();
-						FileOutputStream fos = new FileOutputStream(new File(filePath));
+						File file = new File(filePath);
+						FileOutputStream fos = new FileOutputStream(file);
 						byte[] cache = new byte[1024];
 						int read;
 						while( (read = is.read(cache)) > 0 )
 						{
 							fos.write(cache);
 						}
+						
+						
 					}
 					else
 					{
