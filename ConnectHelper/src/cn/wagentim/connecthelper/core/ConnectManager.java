@@ -3,7 +3,7 @@ package cn.wagentim.connecthelper.core;
 
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 
-public final class ConnectManager implements IConnType
+public final class ConnectManager
 {
     private static final int MAX_THREADS = 100;
     
@@ -13,26 +13,5 @@ public final class ConnectManager implements IConnType
     {
         poolingManager = new PoolingHttpClientConnectionManager();
         poolingManager.setMaxTotal(MAX_THREADS);
-    }
-    
-    public void applyConnection(final ConnectData data)
-    {
-        if( null == data )
-        {
-            return;
-        }
-        
-        int connType = data.getConnType();
-        
-        switch(connType)
-        {
-            default:
-                applyDefaultConnection(data);
-        }
-    }
-
-    private void applyDefaultConnection(ConnectData data)
-    {
-        
     }
 }
