@@ -10,6 +10,7 @@
 	<classpathentry kind="lib" path="libs/httpclient-cache-4.3.4.jar"/>
 	<classpathentry kind="lib" path="libs/httpcore-4.3.2.jar"/>
 	<classpathentry kind="lib" path="libs/httpmime-4.3.4.jar"/>
+	<classpathentry kind="lib" path="libs/jsoup-1.8.1.jar" sourcepath="libs/jsoup-1.8.1-sources.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/BasicUtils"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/QLogger"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/SiteCollections"/>

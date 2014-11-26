@@ -7,10 +7,6 @@ import java.nio.charset.Charset;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
@@ -26,8 +22,8 @@ import org.apache.http.impl.client.FutureRequestExecutionService;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.client.LaxRedirectStrategy;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import cn.wagentim.sitecollections.sites.WebSite;
 
@@ -75,22 +71,12 @@ public abstract class Connection implements IConnect
 	{
 		String content = printResponseContent(response, false);
 		
-		DocumentBuilderFactory dbfac = DocumentBuilderFactory.newInstance();
-		
-		try 
+		if( null != content && !content.isEmpty() )
 		{
-			DocumentBuilder docBuilder = dbfac.newDocumentBuilder();
-			
-			return docBuilder.parse(content);
-			
-		} catch (ParserConfigurationException ex)
-		{
-			throw new IllegalStateException(ex);
-		} 
-		catch (SAXException ex)
-		{
-			throw new ClientProtocolException("Malformed XML document", ex);
+			return Jsoup.parse(content);
 		}
+		
+		return null;
 	}
 	
 	protected String printResponseContent(final HttpResponse response, boolean console) throws ClientProtocolException
