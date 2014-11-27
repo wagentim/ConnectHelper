@@ -32,12 +32,15 @@ import org.apache.http.protocol.HttpContext;
 import org.jsoup.nodes.Document;
 
 import cn.wagentim.connecthelper.core.Connection;
+import cn.wagentim.managers.IPersistanceManager;
+import cn.wagentim.managers.PersistanceManagerFactory;
 import cn.wagentim.sitecollections.sites.VP;
 import cn.wagentim.sitecollections.sites.WebSite;
 
 public class VPCrawl extends Connection
 {
 	private WebSite vp = new VP();
+	private IPersistanceManager persis = PersistanceManagerFactory.createManager();
 
 	@Override
 	public void exec()
