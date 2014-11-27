@@ -35,8 +35,8 @@ public abstract class Connection implements IConnect
 {
 	protected HttpUriRequest currRequest = null;
 	protected HttpClientContext currContext = null;
-	protected ResponseHandler<Document> currHandler = null;
-	protected FutureCallback<Document> currCallback = null;
+	protected ResponseHandler<Object> currHandler = null;
+	protected FutureCallback<Object> currCallback = null;
 	protected final HttpClient client;
 	protected final static ExecutorService eService = Executors.newFixedThreadPool(5);
 	protected FutureRequestExecutionService reService = null;

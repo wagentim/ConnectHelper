@@ -1,4 +1,4 @@
-package cn.wagentim.connecthelper.connections;
+package cn.wagentim.connecthelper.crawls;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -35,7 +35,7 @@ import cn.wagentim.connecthelper.core.Connection;
 import cn.wagentim.sitecollections.sites.VP;
 import cn.wagentim.sitecollections.sites.WebSite;
 
-public class VPConnection extends Connection
+public class VPCrawl extends Connection
 {
 	private WebSite vp = new VP();
 
@@ -59,7 +59,7 @@ public class VPConnection extends Connection
 					public void validate(Cookie cookie, CookieOrigin origin)
 							throws MalformedCookieException
 					{
-						// Oh, I am easy
+						// using self defined Cookie Spec Provider to avoid error message
 					}
 				};
 			}
@@ -82,13 +82,12 @@ public class VPConnection extends Connection
 	// get the main page
 	private void step1()
 	{
-		currCallback = new FutureCallback<Document>()
+		currCallback = new FutureCallback<Object>()
 		{
 
 			@Override
-			public void completed(Document document)
+			public void completed(Object document)
 			{
-				// System.out.println(document.toString());
 				step2();
 			}
 
@@ -107,11 +106,11 @@ public class VPConnection extends Connection
 			}
 		};
 
-		currHandler = new ResponseHandler<Document>()
+		currHandler = new ResponseHandler<Object>()
 		{
 
 			@Override
-			public Document handleResponse(HttpResponse response)
+			public Object handleResponse(HttpResponse response)
 			{
 				try
 				{
@@ -148,40 +147,46 @@ public class VPConnection extends Connection
 
 	}
 
+	/**
+	 * Post login data for getting Auth_Token and entering the page
+	 */
 	private void step2()
 	{
-		currCallback = new FutureCallback<Document>()
+		currCallback = new FutureCallback<Object>()
 		{
-
-			@Override
-			public void completed(Document document)
-			{
-				System.out.println(document.toString());
-
-			}
-
-			@Override
-			public void failed(Exception paramException)
-			{
-				// TODO Auto-generated method stub
-
-			}
 
 			@Override
 			public void cancelled()
 			{
 				// TODO Auto-generated method stub
+				
+			}
 
+			@Override
+			public void completed(Object object)
+			{
+				cacheAuthToken();
+				
+				if( object != null && object instanceof Document)
+				{
+					processPage((Document)object);
+				}
+			}
+
+			@Override
+			public void failed(Exception arg0)
+			{
+				// TODO Auto-generated method stub
+				
 			}
 		};
 
-		currHandler = new ResponseHandler<Document>()
+		currHandler = new ResponseHandler<Object>()
 		{
 
 			@Override
-			public Document handleResponse(HttpResponse response)
+			public Object handleResponse(HttpResponse response)
 			{
-				
 				try
 				{
 					return getContentAsDocument(response);
@@ -211,15 +216,12 @@ public class VPConnection extends Connection
 		{
 			return;
 		}
+		
 		currRequest = new HttpPost(uri);
-		List<NameValuePair> postParams = new ArrayList<NameValuePair>();
-		postParams.add(new BasicNameValuePair("PortalTheme.CountryTheme.CouleurTexte", "black"));
-		postParams.add(new BasicNameValuePair("Email", vp.getUserName()));
-		postParams.add(new BasicNameValuePair("Password", vp.getPassword()));
 		
 		try
 		{
-			((HttpPost)currRequest).setEntity(new UrlEncodedFormEntity(postParams));
+			((HttpPost)currRequest).setEntity(new UrlEncodedFormEntity(getLoginFormData()));
 		}
 		catch (UnsupportedEncodingException e)
 		{
@@ -227,12 +229,34 @@ public class VPConnection extends Connection
 		}
 		
 		run();
+	}
+	
+	protected void cacheAuthToken()
+	{
+		
+		
+	}
 
+	protected void processPage(Document object)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	private List<NameValuePair> getLoginFormData()
+	{
+		List<NameValuePair> postParams = new ArrayList<NameValuePair>();
+		
+		postParams.add(new BasicNameValuePair("PortalTheme.CountryTheme.CouleurTexte", "black"));
+		postParams.add(new BasicNameValuePair("Email", vp.getUserName()));
+		postParams.add(new BasicNameValuePair("Password", vp.getPassword()));
+		
+		return postParams;
 	}
 
 	public static void main(String[] args)
 	{
-		VPConnection vp = new VPConnection();
+		VPCrawl vp = new VPCrawl();
 		vp.exec();
 	}
 }
