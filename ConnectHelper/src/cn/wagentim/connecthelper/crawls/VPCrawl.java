@@ -34,12 +34,9 @@ import org.jsoup.nodes.Document;
 import cn.wagentim.connecthelper.core.Connection;
 import cn.wagentim.managers.IPersistanceManager;
 import cn.wagentim.managers.PersistanceManagerFactory;
-import cn.wagentim.sitecollections.sites.VP;
-import cn.wagentim.sitecollections.sites.WebSite;
 
 public class VPCrawl extends Connection
 {
-	private WebSite vp = new VP();
 	private IPersistanceManager persis = PersistanceManagerFactory.createManager();
 
 	@Override
@@ -130,15 +127,6 @@ public class VPCrawl extends Connection
 
 		URI uri = null;
 
-		try
-		{
-			uri = getURIBuilder(vp).build();
-		}
-		catch (URISyntaxException e)
-		{
-			e.printStackTrace();
-		}
-
 		if (null == uri)
 		{
 			return;
@@ -162,14 +150,14 @@ public class VPCrawl extends Connection
 			public void cancelled()
 			{
 				// TODO Auto-generated method stub
-				
+
 			}
 
 			@Override
 			public void completed(Object object)
 			{
 				cacheAuthToken();
-				
+
 				if( object != null && object instanceof Document)
 				{
 					processPage((Document)object);
@@ -180,7 +168,7 @@ public class VPCrawl extends Connection
 			public void failed(Exception arg0)
 			{
 				// TODO Auto-generated method stub
-				
+
 			}
 		};
 
@@ -199,29 +187,20 @@ public class VPCrawl extends Connection
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
+
 				return null;
 			}
 		};
 
 		URI uri = null;
 
-		try
-		{
-			uri = getURIBuilder(vp).build();
-		}
-		catch (URISyntaxException e)
-		{
-			e.printStackTrace();
-		}
-
 		if (null == uri)
 		{
 			return;
 		}
-		
+
 		currRequest = new HttpPost(uri);
-		
+
 		try
 		{
 			((HttpPost)currRequest).setEntity(new UrlEncodedFormEntity(getLoginFormData()));
@@ -230,30 +209,28 @@ public class VPCrawl extends Connection
 		{
 			e.printStackTrace();
 		}
-		
+
 		run();
 	}
-	
+
 	protected void cacheAuthToken()
 	{
-		
-		
+
+
 	}
 
 	protected void processPage(Document object)
 	{
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	private List<NameValuePair> getLoginFormData()
 	{
 		List<NameValuePair> postParams = new ArrayList<NameValuePair>();
-		
+
 		postParams.add(new BasicNameValuePair("PortalTheme.CountryTheme.CouleurTexte", "black"));
-		postParams.add(new BasicNameValuePair("Email", vp.getUserName()));
-		postParams.add(new BasicNameValuePair("Password", vp.getPassword()));
-		
+
 		return postParams;
 	}
 

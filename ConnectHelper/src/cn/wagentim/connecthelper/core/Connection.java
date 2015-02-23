@@ -15,7 +15,6 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.protocol.HttpClientContext;
-import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.concurrent.FutureCallback;
 import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.FutureRequestExecutionService;
@@ -25,10 +24,8 @@ import org.apache.http.impl.client.LaxRedirectStrategy;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import cn.wagentim.sitecollections.sites.WebSite;
-
 /**
- * Holding some basic connection handler 
+ * Holding some basic connection handler
  * @author bihu8398
  */
 public abstract class Connection implements IConnect
@@ -40,92 +37,82 @@ public abstract class Connection implements IConnect
 	protected final HttpClient client;
 	protected final static ExecutorService eService = Executors.newFixedThreadPool(5);
 	protected FutureRequestExecutionService reService = null;
-	
+
 	public Connection()
 	{
 		client = getHttpClientBuilder().build();
 		reService = new FutureRequestExecutionService(client, eService);
 	}
-	
+
 	protected HttpClientBuilder getHttpClientBuilder()
 	{
 		return HttpClients.custom().setRedirectStrategy(new LaxRedirectStrategy());
 	}
-	
-	protected URIBuilder getURIBuilder(WebSite site)
-	{
-		if( null == site )
-		{
-			return null;
-		}
-		
-		return new URIBuilder().setHost(site.getHost()).setScheme(site.getScheme()).setPath(site.getPath());
-	}
-	
+
 	protected void run()
 	{
 		reService.execute(currRequest, currContext, currHandler, currCallback);
 	}
-	
+
 	protected Document getContentAsDocument(HttpResponse response) throws IllegalStateException, IOException
 	{
 		String content = printResponseContent(response, false);
-		
+
 		if( null != content && !content.isEmpty() )
 		{
 			return Jsoup.parse(content);
 		}
-		
+
 		return null;
 	}
-	
+
 	protected String printResponseContent(final HttpResponse response, boolean console) throws ClientProtocolException
 	{
 		if( null == response )
 		{
 			return null;
 		}
-		
+
 		StatusLine statusLine = response.getStatusLine();
 		HttpEntity entity = response.getEntity();
-		
-		if (statusLine.getStatusCode() >= 300) 
+
+		if (statusLine.getStatusCode() >= 300)
 		{
 			return null;
 		}
-		
-		if (entity == null) 
+
+		if (entity == null)
 		{
 			throw new ClientProtocolException("Response contains no content");
 		}
-		
+
 		InputStreamReader sr = null;
 		BufferedReader br = null;
 		StringBuffer sb = new StringBuffer();
-		
-		try 
+
+		try
 		{
 			ContentType contentType = ContentType.getOrDefault(response.getEntity());
-			
+
 			String mimeType = contentType.getMimeType();
-			
+
 			if (!mimeType.toLowerCase().contains("html"))
 			{
 				throw new ClientProtocolException("Unexpected content type:"
 						+ contentType);
 			}
-			
+
 			Charset charset = contentType.getCharset();
-			
+
 			if (charset == null)
 			{
 				charset = Charset.forName("utf-8");
 			}
-			
+
 			sr = new InputStreamReader(response.getEntity().getContent(), charset);
 			br = new BufferedReader(sr);
 			String s = null;
-			
+
 			while( (s = br.readLine() ) != null )
 			{
 				if( console )
@@ -134,13 +121,13 @@ public abstract class Connection implements IConnect
 				}
 				sb.append(s);
 			}
-			
-		} 
-		catch (IllegalStateException e) 
+
+		}
+		catch (IllegalStateException e)
 		{
 			e.printStackTrace();
-		} 
-		catch (IOException e) 
+		}
+		catch (IOException e)
 		{
 			e.printStackTrace();
 		}
@@ -153,10 +140,10 @@ public abstract class Connection implements IConnect
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				
+
 				br = null;
 			}
-			
+
 			if( null != sr )
 			{
 				try {
@@ -164,11 +151,11 @@ public abstract class Connection implements IConnect
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				
+
 				sr = null;
 			}
 		}
-		
+
 		return sb.toString();
 	}
 }
