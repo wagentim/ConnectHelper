@@ -1,4 +1,4 @@
-package cn.wagentim.sitecollection.handlers;
+package cn.wagentim.discount.handlers;
 
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
@@ -9,11 +9,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import cn.wagentim.connecthelper.core.FileHelper;
-import cn.wagentim.connecthelper.core.Validator;
-import cn.wagentim.connecthelper.threads.GetPageContent;
-import cn.wagentim.sitecollections.sites.IWebsite;
-import cn.wagentim.sitecollections.sites.SparHandy;
+import cn.wagentim.discount.connector.GetPageContent;
+import cn.wagentim.discount.core.FileHelper;
+import cn.wagentim.discount.sites.IWebsite;
+import cn.wagentim.discount.sites.SparHandy;
+import cn.wagentim.discount.utils.Validator;
 
 public class SparHandyHandler extends AbstractSiteHandler
 {
@@ -78,9 +78,11 @@ public class SparHandyHandler extends AbstractSiteHandler
 	        for(Element pic: imgs)
 	        {
 	            String imgLink = pic.attr("src");
+	            
+	            
 	            if( !imgLink.contains("mini"))
 	            {
-	                System.out.println("www.sparhandy.de/"+imgLink);
+	                System.out.println(site.getDomain()+"/"+imgLink);
 	            }
 	        }
 	    }

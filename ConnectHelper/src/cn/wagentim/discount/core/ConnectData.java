@@ -1,6 +1,6 @@
-package cn.wagentim.connecthelper.core;
+package cn.wagentim.discount.core;
 
-import cn.wagentim.connecthelper.threads.ICallback;
+import cn.wagentim.discount.connector.ICallback;
 
 public final class ConnectData
 {

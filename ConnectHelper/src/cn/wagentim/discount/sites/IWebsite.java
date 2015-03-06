@@ -1,8 +1,8 @@
-package cn.wagentim.sitecollections.sites;
+package cn.wagentim.discount.sites;
 
 import java.net.URI;
 
-import cn.wagentim.sitecollection.handlers.ISiteHandler;
+import cn.wagentim.discount.handlers.ISiteHandler;
 
 public interface IWebsite
 {

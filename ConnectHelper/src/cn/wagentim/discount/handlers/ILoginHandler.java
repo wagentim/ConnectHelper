@@ -1,4 +1,4 @@
-package cn.wagentim.sitecollection.handlers;
+package cn.wagentim.discount.handlers;
 
 import org.apache.http.client.protocol.HttpClientContext;
 

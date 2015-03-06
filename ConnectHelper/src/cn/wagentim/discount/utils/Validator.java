@@ -1,4 +1,4 @@
-package cn.wagentim.connecthelper.core;
+package cn.wagentim.discount.utils;
 
 import org.apache.http.StatusLine;
 import org.apache.http.client.methods.CloseableHttpResponse;

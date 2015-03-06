@@ -1,4 +1,4 @@
-package cn.wagentim.connecthelper.threads;
+package cn.wagentim.discount.connector;
 
 public interface IDownloadListener extends ICallback
 {

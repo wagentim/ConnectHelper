@@ -1,4 +1,4 @@
-package cn.wagentim.connecthelper.core;
+package cn.wagentim.discount.core;
 
 import java.io.BufferedReader;
 import java.io.IOException;

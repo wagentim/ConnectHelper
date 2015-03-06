@@ -1,6 +1,6 @@
-package cn.wagentim.sitecollection.handlers;
+package cn.wagentim.discount.handlers;
 
-import cn.wagentim.sitecollections.sites.IWebsite;
+import cn.wagentim.discount.sites.IWebsite;
 
 public abstract class AbstractSiteHandler implements ISiteHandler
 {

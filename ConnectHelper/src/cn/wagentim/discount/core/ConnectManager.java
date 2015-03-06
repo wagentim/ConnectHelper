@@ -1,5 +1,5 @@
 
-package cn.wagentim.connecthelper.core;
+package cn.wagentim.discount.core;
 
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 

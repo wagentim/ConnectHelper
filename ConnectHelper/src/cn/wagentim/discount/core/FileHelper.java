@@ -1,4 +1,4 @@
-package cn.wagentim.connecthelper.core;
+package cn.wagentim.discount.core;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -13,6 +13,7 @@ import java.nio.file.StandardOpenOption;
 
 import cn.wagentim.basicutils.BasicUtils;
 import cn.wagentim.basicutils.StringConstants;
+import cn.wagentim.discount.utils.Validator;
 
 public final class FileHelper
 {

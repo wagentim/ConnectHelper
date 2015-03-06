@@ -1,4 +1,4 @@
-package cn.wagentim.connecthelper.core;
+package cn.wagentim.discount.core;
 
 public interface IConnect
 {

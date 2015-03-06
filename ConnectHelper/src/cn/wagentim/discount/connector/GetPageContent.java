@@ -1,5 +1,5 @@
 
-package cn.wagentim.connecthelper.threads;
+package cn.wagentim.discount.connector;
 
 import java.io.IOException;
 import java.net.URI;

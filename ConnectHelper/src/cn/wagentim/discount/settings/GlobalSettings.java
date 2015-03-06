@@ -1,4 +1,4 @@
-package cn.wagentim.sitecollection.settings;
+package cn.wagentim.discount.settings;
 
 import cn.wagentim.basicutils.StringConstants;
 

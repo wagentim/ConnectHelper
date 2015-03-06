@@ -1,10 +1,10 @@
-package cn.wagentim.sitecollections.sites;
+package cn.wagentim.discount.sites;
 
 import java.net.URI;
 
 import cn.wagentim.basicutils.StringConstants;
-import cn.wagentim.sitecollection.handlers.ISiteHandler;
-import cn.wagentim.sitecollection.handlers.SparHandyHandler;
+import cn.wagentim.discount.handlers.ISiteHandler;
+import cn.wagentim.discount.handlers.SparHandyHandler;
 
 public class SparHandy implements IWebsite
 {

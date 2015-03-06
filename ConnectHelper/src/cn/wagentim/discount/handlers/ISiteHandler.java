@@ -1,4 +1,4 @@
-package cn.wagentim.sitecollection.handlers;
+package cn.wagentim.discount.handlers;
 
 public interface ISiteHandler
 {

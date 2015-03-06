@@ -3,7 +3,7 @@
  * All rights reserved
  */
 
-package cn.wagentim.connecthelper.core;
+package cn.wagentim.discount.core;
 
 import java.net.URI;
 import java.util.List;

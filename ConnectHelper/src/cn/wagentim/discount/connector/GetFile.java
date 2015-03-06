@@ -1,4 +1,4 @@
-package cn.wagentim.connecthelper.threads;
+package cn.wagentim.discount.connector;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,16 +22,14 @@ import de.wagentim.qlogger.service.QLoggerService;
 public class GetFile extends AbstractThread
 {
 
-	private final CloseableHttpClient httpClient;
-	private final HttpContext context;
+	private CloseableHttpClient httpClient;
+	private HttpContext context;
 	private HttpGet httpget;
 	private LogChannel logger = QLoggerService.getChannel(QLoggerService.addChannel(new DefaultChannel("STD_DL")));
 	private final String[] links;
 
-	public GetFile(final CloseableHttpClient httpClient, String[] links)
+	public GetFile(final String[] links, final int type)
 	{
-		this.httpClient = httpClient;
-		this.context = HttpClientContext.create();
 		this.links = links;
 	}
 

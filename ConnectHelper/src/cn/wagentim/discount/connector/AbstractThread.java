@@ -1,4 +1,4 @@
-package cn.wagentim.connecthelper.threads;
+package cn.wagentim.discount.connector;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -1,5 +1,5 @@
 
-package cn.wagentim.connecthelper.threads;
+package cn.wagentim.discount.connector;
 
 import java.io.IOException;
 
@@ -14,7 +14,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import cn.wagentim.sitecollections.sites.IWebsite;
+import cn.wagentim.discount.sites.IWebsite;
 
 
 /**
