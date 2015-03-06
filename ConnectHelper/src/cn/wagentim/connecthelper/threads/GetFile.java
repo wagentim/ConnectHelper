@@ -19,20 +19,20 @@ import de.wagentim.qlogger.channel.LogChannel;
 import de.wagentim.qlogger.logger.Log;
 import de.wagentim.qlogger.service.QLoggerService;
 
-public class GetFileThread extends AbstractThread
+public class GetFile extends AbstractThread
 {
 
 	private final CloseableHttpClient httpClient;
 	private final HttpContext context;
-	private final HttpGet httpget;
+	private HttpGet httpget;
 	private LogChannel logger = QLoggerService.getChannel(QLoggerService.addChannel(new DefaultChannel("STD_DL")));
+	private final String[] links;
 
-	public GetFileThread(
-			CloseableHttpClient httpClient, HttpGet httpget)
+	public GetFile(final CloseableHttpClient httpClient, String[] links)
 	{
 		this.httpClient = httpClient;
 		this.context = HttpClientContext.create();
-		this.httpget = httpget;
+		this.links = links;
 	}
 
 	public void run()
@@ -62,8 +62,8 @@ public class GetFileThread extends AbstractThread
 						{
 							fos.write(cache);
 						}
-						
-						
+
+
 					}
 					else
 					{
@@ -75,7 +75,7 @@ public class GetFileThread extends AbstractThread
 			{
 				response.close();
 			}
-			
+
 		} catch (ClientProtocolException ex)
 		{
 			// Handle protocol errors

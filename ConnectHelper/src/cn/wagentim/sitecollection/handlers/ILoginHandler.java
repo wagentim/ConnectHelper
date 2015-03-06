@@ -1,4 +1,4 @@
-package cn.wagentim.sitecollection.handlers.basic;
+package cn.wagentim.sitecollection.handlers;
 
 import org.apache.http.client.protocol.HttpClientContext;
 

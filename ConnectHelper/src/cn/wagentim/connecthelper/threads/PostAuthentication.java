@@ -2,7 +2,6 @@
 package cn.wagentim.connecthelper.threads;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
@@ -15,7 +14,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import cn.wagentim.sitecollections.sites.IWebSite;
+import cn.wagentim.sitecollections.sites.IWebsite;
 
 
 /**
@@ -26,9 +25,9 @@ import cn.wagentim.sitecollections.sites.IWebSite;
  */
 public class PostAuthentication extends AbstractThread
 {
-    private final IWebSite site;
+    private final IWebsite site;
 
-    public PostAuthentication(final IWebSite site)
+    public PostAuthentication(final IWebsite site)
     {
         this.site = site;
     }
@@ -53,11 +52,11 @@ public class PostAuthentication extends AbstractThread
 
             try
             {
-                HttpGet httpget = new HttpGet(site.getURI());
+                HttpGet httpget = new HttpGet(site.getLoginURI());
                 response = httpclient.execute(httpget, context);
                 EntityUtils.consume(response.getEntity());
             }
-            catch ( IOException | URISyntaxException e )
+            catch ( IOException e )
             {
                 e.printStackTrace();
             }

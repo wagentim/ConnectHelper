@@ -1,0 +1,1194 @@
+  <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Handy & Handyvertrag - Bestellen Sie Handys gÃ¼nstig bei Sparhandy</title>
+    <meta name="keywords" content="handy,handyshop,handyvertrag,handytarife,handy mit vertrag,handy ohne vertrag,handyangebote,handyvertrÃ¤ge,handy ohne grundgebÃ¼hr,handys,gÃ¼nstige handys">
+    <meta name="description" content="Sparen heiÃt Sparhandy.de - Nur wir haben alle Top Marken Handys ab 1,- Euro bei freier Wahl des Netzbetreibers. Ihre neuer Handyvertrag wartet auf Sie.">
+    <link href="/css/standard.css?date=2015_03_03" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/ico" href="/images/site/favicon.ico"/>
+    <link href="/css/SuggestFramework.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        var _appNamespace = 'sparhandy';
+        window[_appNamespace] = window[_appNamespace] || {};
+    </script>
+            <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="/js/pubsub.js"></script>
+    <script type="text/javascript" src="/js/shscript.min.js"></script>
+    <script type="text/javascript" src="/js/autoheight.js"></script>
+    <script type="text/javascript" src="/js/popup.js"></script>
+    <script type="text/javascript" src="/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/js/event-tracking.js?nc=2015-02-05"></script>
+    <script type="text/javascript" src="/js/main.js?nc=2015-02-05"></script>
+
+    <script type="text/javascript">window.onload = initializeSuggestFramework;</script>
+
+    <script type="application/ld+">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "Organization",
+        "name" : "Sparhandy GmbH",
+        "url" : "http://www.sparhandy.de",
+        "sameAs" : [ "https://www.facebook.com/sparhandy.de",
+        "https://twitter.com/sparhandy_de",
+        "https://plus.google.com/+sparhandy/posts"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url" : "http://www.sparhandy.de",
+        "logo": "http://www.sparhandy.de/images/site/presse/vorschaugrafiken/gross/sh_logo.jpg"
+    }
+    </script>
+
+    <meta name="robots" CONTENT="index,follow,noodp,noydir">
+    <meta name="language" CONTENT="de"/>
+    <meta name="verify-v1" content="cn/PcYhxg2bN1IEfY8WO9kRVh9g0HKLN+aTmseJouHg="/>
+    <link rel="alternate" media="only screen and (max-width: 580px)" href="http://m.sparhandy.de/" /><link rel="alternate" media="handheld" href="http://m.sparhandy.de/" /><link rel="canonical" href="http://www.sparhandy.de/"/>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAllowAnchor', true], ['_setCampNameKey', 'tk'], ['_setCampMediumKey', 'tm'], ['_setCampSourceKey', 'th'], ['_setCampTermKey', 'tb'], ['_setCampContentKey', 'ta'], ['_setAccount', 'UA-10348818-4'], ['_setCampaignCookieTimeout', 5184000000], ['_gat._anonymizeIp']);
+        
+        (function ()
+        {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www' ) + '.google-analytics.com/ga.js';            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+            <script src="/js/mobileCookieSettings.js"></script>
+        <script src="/js/mobileDetection.js"></script>
+        <script src="/js/mobileCookie.js"></script>
+        </head>
+
+    <body>
+
+    <div itemscope itemtype="http://schema.org/MobilePhoneStore" class="container">
+        <meta itemprop="sameAs" content="http://de.wikipedia.org/wiki/Sparhandy">
+
+        <div class="div_header">
+            <div class="uspHeader">
+    <div class="colUsp text-center pull-left">
+        <div class="uspBox">
+            <div class="usp_dhl pull-left">
+                <img src="/images/site/header/ico_dhl.svg" alt="DHL-Versand" />
+            </div>
+            <span>Kostenloser Versand mit DHL</span>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="colUsp text-center pull-left">
+        <div class="uspBox uspBox14">
+            <div class="usp_14 pull-left">
+                <img src="/images/site/header/ico_14.svg" alt="14" />
+            </div>
+            <span>Jahre Mobilfunkerfahrung</span>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="colUsp text-center pull-left">
+        <div class="uspBox">
+            <div class="usp_kunden pull-left">
+                <img src="/images/site/header/ico_kunden.svg" alt="Kunden" />
+            </div>
+            <span>&Uuml;ber 1 Million Bestellungen</span>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="colUsp pull-left headerUspLink text-center">
+        <div class="uspBox pull-right">
+            <a href="https://www.sparhandy.de/service-bestellstatus.html">Bestellstatus</a>
+            <a href="https://www.sparhandy.de/hilfe/">Hilfe</a>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="colHeader">
+    <div class="headerLogo">
+        <a href="http://www.sparhandy.de/" title="Startseite" itemprop="url">
+            <img src="/images/site/sparhandy_logo.svg" alt="Logo" itemprop="logo" />
+        </a>
+    </div>
+    <div class="pull-right col-rightHeader">
+        <div class="div_top_cart">
+                        <a title="Ihr Warenkorb ist leer." href="javascript:void(0);" target="_self" class="link_topmenu"><img src="/images/site/sh_bag.png" border="0" class="carticon" alt="Warenkorb vom Handyshop Sparhandy" /> <span class="cartNumber">0</span></a>        </div>
+    </div>
+    <div class="div_top_awards">
+        <a href="http://www.safer-shopping.de/zertifikat/sparhandy-de.html" target="_blank"
+           title="Sparhandy zertifiziert von T&Uuml;V S&uuml;d">
+            <img src="/images/site/tuev_sued.png" border="0" alt="T&Uuml;V S&uuml;d G&uuml;tesiegel" />
+        </a>
+        <a href="https://www.trustedshops.de/zertifikat/X47CA0CE9799502D70DB66076630624EA.html" target="_blank"
+           title="Sparhandy zertifiziert von Trusted Shops">
+            <img src="/images/site/trusted_shops.png" border="0" alt="Trusted Shops Garantiesiegel" />
+        </a>
+        <a href="https://www.ekomi.de/bewertungen-sparhandy.html" target="_blank" title="Sparhandy zertifiziert von eKomi">
+            <img src="/images/site/ekomi_silber.png" border="0" alt="eKomi Shopsiegel" />
+        </a>
+    </div>
+    <div class="clearfix"></div>
+</div>
+        </div>
+
+        <a itemprop="url" href="http://www.sparhandy.de/" title="Startseite">
+            <div id="logoSparhandy">
+                <meta itemprop="logo" content="http://www.sparhandy.de/images/site/presse/vorschaugrafiken/gross/sh_logo.jpg">
+            </div>
+        </a>
+
+        <div class="div_topnavi">
+            <nav>
+    <ul id="nav">
+        <li class="active"><a href="/">Home</a></li><li><a href="/handys/">Handys</a><ul><li><a href="/handysuche.html">Handysuche</a></li><li><a href="/apple/iphone.html">Apple iPhone</a></li><li class="hr"><div class="sep"></div></li><li><a href="/apple/">Apple</a></li><li><a href="/samsung/">Samsung</a></li><li><a href="/sony/">Sony</a></li><li><a href="/htc/">HTC</a></li><li><a href="/lg/">LG</a></li><li><a href="/motorola/">Motorola</a></li><li><a href="/nokia/">Nokia</a></li><li><a href="/microsoft/">Microsoft</a></li><li><a href="/huawei/">Huawei</a></li><li><a href="/blackberry/">Blackberry</a></li><li><a href="/caterpillar/">Caterpillar</a></li><li><a href="/wiko/">Wiko</a></li><li><a href="/doro/">Doro</a></li></ul></li><li><a href="/tablets/">Tablets</a><ul><li><a href="/apple/ipad.html">Apple iPad</a></li><li><a href="/tablets/#tophandys">Alle Hersteller</a></li></ul></li><li><a href="/smartwatches/">Smartwatches</a></li><li><a href="#">Tarife</a><ul><li><a href="/tarifsuche.html">Tarifsuche</a></li><li><a href="/allnet-flat/">Sparhandy Allnet-Flat</a></li><li><a href="/t-mobile/flatrate.html">Telekom Flatrate</a></li><li><a href="/vodafone/flatrate.html">Vodafone Flatrate</a></li><li><a href="/base/">BASE</a></li><li><a href="/o2/flatrate.html">o2 Flatrate</a></li><li><a href="/otelo/">otelo</a></li><li><a href="/mobilcom-debitel/">Mobilcom Debitel</a></li><li><a href="/nurkarte.html">Nur Karte</a></li><li><a href="/handy-vertrag/handy-vertragsverlaengerung.html">Vertragsverl&auml;ngerung</a></li><li><a href="/datentarife/">Datentarife</a></li><li><a href="/studententarife.html">Studententarife</a></li><li><a href="/businesstarife.html">Businesstarife</a></li></ul></li><li><a href="/netze.html">Netze</a><ul><li><a href="/t-mobile/">Telekom</a></li><li><a href="/vodafone/">Vodafone</a></li><li><a href="/o2/">o2</a></li><li><a href="/e-plus/">E-Plus</a></li></ul></li><li><a href="#">Top 10</a><ul><li><a href="/apple/iphone-6-16gb.html">Apple iPhone 6 16GB</a></li><li><a href="/samsung/galaxy-s5-16-gb.html">Samsung Galaxy S5</a></li><li><a href="/samsung/galaxy-note-4-n910f.html">Samsung Note 4</a></li><li><a href="/htc/one-m8.html">HTC One M8</a></li><li><a href="/sony/xperia-z3.html">Sony Xperia Z3</a></li><li><a href="/apple/ipad-air-2-128gb-wifi-plus-cellular.html">Apple iPad Air 2</a></li><li><a href="/lg/g-flex-2.html">LG Flex 2</a></li><li><a href="/samsung/galaxy-note-edge-n915f.html">Galaxy Note Edge</a></li><li><a href="/apple/iphone-6-plus-16gb.html">Apple iPhone Plus</a></li><li><a href="/samsung/galaxy-alpha-g850f.html">Galaxy Alpha G850F</a></li></ul></li><li><a href="http://www.sparhandy.tv/">Sparhandy.tv</a></li></ul>        <div class="clearfix"></div>
+</nav>
+        <script src="/js/navMain.js" type="text/javascript"></script>
+<div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="div_linkerrand">
+            <div>
+                
+<!-- no search start -->
+<div class="sidebarLeft">
+    
+        <div class="sidebarBox">
+        <script type="text/javascript">
+    var load = 0;
+
+    function zeige_suche_handy()
+    {
+        try
+        {
+            gaSyncClickHook('SucheNachPopup', 'Open', 'Handy');
+        } catch (err)
+        {
+        }
+        ;
+        if (load == 0)
+        {
+            $.get("/data/handytarifsuche.inc.php", function (data)
+            {
+                $("div#handyTarifSucheContent").html(data);
+                $("div#div_suche_handy").show();
+                load = 1;
+            });
+        }
+        else
+        {
+            $("div#div_suche_tarif").hide();
+            $("div#div_suche_handy").show();
+        }
+    }
+
+    function zeige_suche_tarif()
+    {
+        try
+        {
+            gaSyncClickHook('SucheNachPopup', 'Open', 'Tarif');
+        } catch (err)
+        {
+        }
+        ;
+        if (load == 0)
+        {
+            $.get("/data/handytarifsuche.inc.php", function (data)
+            {
+                $("div#handyTarifSucheContent").html(data);
+                $("div#div_suche_tarif").show();
+                load = 1;
+            });
+        }
+        else
+        {
+            $("div#div_suche_handy").hide();
+            $("div#div_suche_tarif").show();
+        }
+
+    }
+</script>
+<div style="width:200px; height:126px; background:url(/images/randlinks/suche-mit-freitext-bg.gif) no-repeat">
+            <div style="padding-left:10px; padding-top:32px">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="javascript:zeige_suche_handy()" onclick="this.blur()" title=""><img
+                                src="/images/randlinks/suche_handy.gif" width="180" height="20" alt="" border="0"></a></td>
+                </tr>
+                <tr>
+                    <td style="padding-top:5px">
+                        <a href="javascript:zeige_suche_tarif()" onclick="this.blur()" title=""><img
+                                src="/images/randlinks/suche_tarif.gif" width="180" height="20" alt="" border="0"></a></td>
+                </tr>
+                                    <tr>
+                        <td style="padding-top:20px">
+                            <script type="text/javascript">
+                                function checkAndSubmit()
+                                {
+                                    var value = $('#query').val();
+                                    if (value != '' & value != 'Suchbegriff eingeben')
+                                    {
+                                        document.freitextsuche.submit();
+                                    }
+                                }
+                            </script>
+                            <form action="/suche.html" method="get" name="freitextsuche">
+                                <input type="hidden" name="search" value="1">
+                                <table cellspacing="0" cellpadding="0" style="border:1px solid #cdcdcd;">
+                                    <td><input type="text" name="query" id="query" value="Suchbegriff eingeben"
+                                               action="/include/sphider/ajax/sphider-suggest.ajax.php" columns="2"
+                                               autocomplete="off" delay="1500"
+                                               style="width:123px;height:15px;font-size:12px;border:0px;background-color:#fff;">
+                                    </td>
+                                    <td><img src="/images/randlinks/button-freitextsuche.jpg" alt="Suchen"
+                                             onclick="javascript:checkAndSubmit();"></td>
+                                </table>
+                            </form>
+                        </td>
+                    </tr>
+                            </table>
+        </div>
+    </div>
+    
+
+
+    </div>
+    
+                <div id="handyTarifSucheContent"></div>
+
+
+
+    
+    <div class="sidebarBox">
+            </div>
+
+    <!-- Hotline
+    <tr>
+        <td style="padding-top:10px">
+            <img src="/images/randlinks/servicehotline.gif" border="0" alt="Service-Hotline" title="Service-Hotline">
+        </td>
+    </tr>
+    -->
+    <div class="sidebarBox">
+        <a href="/hilfe/#header" target="_parent">
+            <img src="/images/randlinks/hilfe-cta_sidebar.jpg" alt="zur FAQ und Hilfe">
+        </a>
+    </div>
+
+            <!-- ekomi -->
+        <div class="sidebarBox">
+            <!--<script type="text/javascript" src="/ekomi/tooltip.js"></script>-->
+            <link rel="stylesheet" href="/ekomi/css/style.css" type="text/css">
+            <script src="/ekomi/ausgabe.php" type="text/javascript"></script>
+        </div>
+
+                    <!-- Sparhandy Allnet-Flat LP -->
+            <div class="sidebarBox">
+                <a href="/allnet-flat/#sec-teaser" target="_self">
+                    <img src="/images/randlinks/teaser-sparhandy-tarif-sidebar.jpg" alt="Die Sparhandy Allnet-Flats!"
+                        title="Die Sparhandy Allnet-Flats!">
+                </a>
+            </div>
+            
+    <!-- Tagclouds -->
+        <div class="sidebarBox">
+            <ul id="tagcloud">
+    </ul>        </div>
+</div>
+<!-- no search end -->            </div>
+        </div>
+
+
+        <div class="div_content">
+                    <!-- no search start -->
+        <div id="promobanner" style="width:750px; background-color:#FFFFFF">
+            <table cellpadding="0" cellspacing="0" style="position:relative; left:-10px; height:600px" id="cmstbl">
+
+  <tr>
+    <td colspan="3" style="height:300px; padding-left:10px">
+      <table cellpadding="0" cellspacing="0" style="width:750px; height:30px; position:absolute; z-index:2">
+  <tr>
+   <td style="width:10px">
+      <img src="images/tmpltcms/left.gif" width="10" height="30" alt=""></td>
+    <td class="text" style="vertical-align:middle; width:730px; border-top:1px solid #CCCCCC; font-size:2px">&nbsp;</td>
+    <td style="width:10px">
+      <img src="images/tmpltcms/right.gif" width="10" height="30" alt=""></td>
+  </tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:750px; height:300px">
+  <tr>
+    <td class="text" style="height:300px; vertical-align:top; text-align:justify; border-left:1px solid #CCCCCC; border-right:2px solid #CCCCCC">
+      <div style="width:747px; height:300px">
+      <div id="bigteaser">
+	<div class="viewport">
+		<ul class="overview">
+
+
+
+
+
+<!-- SLIDE 1 -->
+
+<li>
+<img src="images/tmpltcms/main_teaser/mt_vf-xl-s6-edge-0315.png" alt="" width="750" height="300" usemap="#Map_mt_vf-xl-s6-edge-0315"/>
+<map name="Map_mt_vf-xl-s6-edge-0315" id="Map_mt_vf-xl-s6-edge-0315">
+  <area shape="rect" coords="-10,1,518,378" href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22311&gruppe=2322&subgruppe=3800">
+  <area shape="rect" coords="518,5,777,278" href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22311&gruppe=2325&subgruppe=3814">
+  <area shape="rect" coords="594,281,743,297" href="http://www.sparhandy.de/vodafone/vodafone-smart-xl.html">
+</map>
+</li>
+
+
+<!-- SLIDE 2 -->
+
+<li>
+<a href="http://www.sparhandy.de/deals/hotdeal"><img src="images/tmpltcms/main_teaser/mt_sh-m-lumia535-motoe-0215.png" alt="" width="750" height="300" /></a>
+</li>
+
+
+
+
+
+<!-- SLIDE 3 -->
+
+<li>
+<img src="images/tmpltcms/main_teaser/mt_ot-xl-s5-s6-z3-0115.png" alt="" width="750" height="300" usemap="#Map_mt_ot-xl-s5-s6-z3-0115"/>
+<map name="Map_mt_ot-xl-s5-s6-z3-0115" id="Map_mt_ot-xl-s5-s6-z3-0115">
+  <area shape="rect" coords="-10,0,302,329" href="http://www.sparhandy.de/vodafone/otelo-allnet-flat-xl.html">
+  <area shape="rect" coords="312,39,441,279" href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22125&gruppe=1991&subgruppe=3167">
+  <area shape="rect" coords="459,40,594,282" href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22125&gruppe=2322&subgruppe=3800">
+  <area shape="rect" coords="610,42,740,283" href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22125&gruppe=2150&subgruppe=3458">
+  <area shape="rect" coords="593,284,741,297" href="http://www.sparhandy.de/vodafone/otelo-allnet-flat-xl.html">
+</map>
+</li>
+
+
+
+
+
+<!-- SLIDE 4 -->
+
+<li>
+<img src="images/tmpltcms/main_teaser/mt_bs-allin-0215.png" alt="" width="750" height="300" usemap="#Map_mt_bs-allin-0215"/>
+<map name="Map_mt_bs-allin-0215" id="Map_mt_bs-allin-0215">
+  <area shape="rect" coords="604,35,740,282" href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22563&gruppe=2260&subgruppe=3671">
+  <area shape="rect" coords="-10,0,302,427" href="http://www.sparhandy.de/e-plus/base-all-in-aktion-deluxe.html">
+  <area shape="rect" coords="314,39,450,282" href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22563&gruppe=2175&subgruppe=3494">
+  <area shape="rect" coords="453,39,602,281" href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22563&gruppe=2149&subgruppe=3444">
+  <area shape="rect" coords="594,282,745,299" href="http://www.sparhandy.de/e-plus/base-all-in-aktion-deluxe.html">
+</map>
+</li>
+
+
+
+
+
+
+<!-- <li>
+<img src="images/tmpltcms/main_teaser/mt_vf-xl-iphone6-1214.png" alt="" width="750" height="300" usemap="#Map_mt_vf-xl-iphone6-1214"/>
+<map name="Map_mt_vf-xl-iphone6-1214" id="Map_mt_vf-xl-iphone6-1214">
+  <area shape="poly" coords="4,297,3,2,742,5,745,274,588,275,586,295" href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22314&gruppe=2175&subgruppe=3494">
+  <area shape="rect" coords="593,281,756,314" href="http://www.sparhandy.de/vodafone/vodafone-smart-xl-aktion.html">
+</map>
+</li> -->
+
+
+<!-- VF DATA GO
+
+<li>
+<a href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22580&gruppe=2294&subgruppe=3726"><img src="images/tmpltcms/main_teaser/mt_vf-gom-tab-0115.png" alt="" width="750" height="300" /></a>
+</li> -->
+
+
+
+
+
+<!-- Z1 COMPACT + ARAL
+
+
+<li>
+<img src="images/tmpltcms/main_teaser/mt_ot-m-z1-0215.png" alt="" width="750" height="300" usemap="#Map_mt_ot-m-z1-0215"/>
+<map name="Map_mt_ot-m-z1-0215" id="Map_mt_ot-m-z1-0215">
+  <area shape="rect" coords="305,2,751,272" href="http://www.sparhandy.de/tarif-handy-kombiniert.html?tarifekategorie=22061&gruppe=1923&subgruppe=3749">
+  <area shape="rect" coords="-10,1,303,377" href="http://www.sparhandy.de/vodafone/otelo-allnet-flat-m.html">
+  <area shape="rect" coords="586,273,797,323" href="http://www.sparhandy.de/sony/xperia-z1-compact.html">
+</map>
+</li>
+
+-->
+
+
+</ul>
+</div>
+</div></td>
+  </tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:750px; height:10px; position:relative; top:-10px">
+  <tr>
+    <td style="width:10px; height:10px">
+      <img src="images/tmpltcms/left2.gif" width="10" height="10" alt=""></td>
+    <td class="text" style="vertical-align:middle; width:730px">
+      <img src="images/tmpltcms/bttm.gif" width="730" height="10" alt=""></td>
+    <td style="width:10px">
+      <img src="images/tmpltcms/right2.gif" width="10" height="10" alt=""></td>
+  <tr>
+</table></td>
+  </tr>
+  
+  <tr>
+    <td style="width:243px; height:210px; padding-left:10px">
+      <table cellpadding="0" cellspacing="0" style="width:243px; height:30px; position:absolute; z-index:2">
+  <tr>
+   <td style="width:10px">
+      <img src="images/tmpltcms/left.gif" width="10" height="30" alt=""></td>
+    <td class="text" style="vertical-align:middle; width:223px; border-top:1px solid #CCCCCC; font-size:2px">&nbsp;</td>
+    <td style="width:10px">
+      <img src="images/tmpltcms/right.gif" width="10" height="30" alt=""></td>
+  </tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:243px; height:210px">
+  <tr>
+    <td class="text" style="height:210px; vertical-align:top; text-align:justify; border-left:1px solid #CCCCCC; border-right:2px solid #CCCCCC">
+      <div style="width:240px; height:210px">
+      <a href="http://www.sparkabel.de"  title=""><img src="images/tmpltcms/sparkabel-startseite.jpg" border="0" alt="" ></a>
+</div></td>
+  </tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:243px; height:10px; position:relative; top:-10px">
+  <tr>
+    <td style="width:10px; height:10px">
+      <img src="images/tmpltcms/left2.gif" width="10" height="10" alt=""></td>
+    <td class="text" style="vertical-align:middle; width:223px">
+      <img src="images/tmpltcms/bttm.gif" width="223" height="10" alt=""></td>
+    <td style="width:10px">
+      <img src="images/tmpltcms/right2.gif" width="10" height="10" alt=""></td>
+  <tr>
+</table></td>
+
+    <td style="width:243px; height:210px; padding-left:10px">
+      <table cellpadding="0" cellspacing="0" style="width:243px; height:210px">
+  <tr>
+    <td class="text" style="height:210px; vertical-align:top; text-align:justify">
+      <div style="width:240px; height:210px">
+      <img src="images/tmpltcms/Top_5_Tarife.jpg" border="0" alt="" usemap="#imagemap_303">
+      <width="241" height="210" border="0" usemap="imagemap_303" />
+<map name="imagemap_303" id="Map">
+<area shape="rect" coords="2,24,241,63" href="http://www.sparhandy.de/vodafone/vodafone-smart-xl.html" />
+ <area shape="rect" coords="3,63,238,98" href="http://www.sparhandy.de/vodafone/otelo-allnet-flat-xl.html" /> 
+ <area shape="rect" coords="3,99,243,134" href="http://www.sparhandy.de/o2/o2-blue-all-in-l-aktion.html" />
+<area shape="rect" coords="2,135,242,172" href="http://www.sparhandy.de/allnet-flat/#tarifBoxen" alt="Allnet-Flat M"" />
+<area shape="rect" coords="1,173,241,208" href="http://www.sparhandy.de/e-plus/base-all-in-aktion-deluxe.html" />
+</map>
+
+
+
+
+
+</div></td>
+  </tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:243px; height:10px; position:relative; top:-10px">
+  <tr>
+   <td style="height:10px">
+      </td>
+  </tr>
+</table></td>
+    
+    <td style="width:244px; height:210px; padding-left:10px">
+      <table cellpadding="0" cellspacing="0" style="width:244px; height:30px; position:absolute; z-index:2">
+  <tr>
+   <td style="width:10px">
+      <img src="images/tmpltcms/left.gif" width="10" height="30" alt=""></td>
+    <td class="text" style="vertical-align:middle; width:224px; border-top:1px solid #CCCCCC; font-size:2px">&nbsp;</td>
+    <td style="width:10px">
+      <img src="images/tmpltcms/right.gif" width="10" height="30" alt=""></td>
+  </tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:244px; height:210px">
+  <tr>
+    <td class="text" style="height:210px; vertical-align:top; text-align:justify; border-left:1px solid #CCCCCC; border-right:2px solid #CCCCCC">
+      <div style="width:241px; height:210px">
+      			<div style="width:241px; height:27px; position:absolute; z-index: 999;">
+	<a href="http://www.sparhandy.de/handys/"><img src="/images/site/spc.gif" height="27" width="241" border="0" alt="" ></a>
+</div>
+<div style="width:241px; height:27px">
+	<img src="images/site/teaser/miniteaser-headline.jpg" border="0" alt="" >
+</div>
+				<div id="miniteaser">
+					<div class="viewport">
+						<ul class="overview">
+
+							<li>
+							<img src="images/tmpltcms/mini_teaser/nokia.jpg" border="0" usemap="#miniMap_1" />
+							  <map name="miniMap_1">
+							    <area shape="rect" coords="0,0,95,141" href="/nokia/lumia-930.html" />
+							    <area shape="rect" coords="96,0,190,141" href="/nokia/lumia-830.html" />
+							    <area shape="rect" coords="191,0,241,141" href="/nokia/" />
+							  </map>
+							</li>
+							<li>
+
+							  <img src="images/tmpltcms/mini_teaser/se.jpg" border="0" usemap="#miniMap_2" />
+							  <map name="miniMap_2">
+							    <area shape="rect" coords="0,0,95,141" href="/sony/xperia-z3-compact.html" />
+							    <area shape="rect" coords="96,0,190,141" href="/sony/xperia-z3.html" />
+							    <area shape="rect" coords="191,0,241,141" href="/sony/" />
+							  </map>
+							</li>
+							<li>
+							  <img src="images/tmpltcms/mini_teaser/samsung.jpg" border="0" usemap="#miniMap_3" />
+
+							  <map name="miniMap_3">
+							    <area shape="rect" coords="0,0,95,141" href="/samsung/galaxy-s6-32gb-g920f.html" />
+                                                            <area shape="rect" coords="96,0,190,141" href="/samsung/galaxy-s6-edge-32gb-g925f.html" />
+							    <area shape="rect" coords="191,0,241,141" href="/samsung/" />
+							  </map>
+							</li>
+							<li>
+							  <img src="images/tmpltcms/mini_teaser/lg.jpg" border="0" usemap="#miniMap_4" />
+							  <map name="miniMap_4">
+							    <area shape="rect" coords="0,0,95,141" href="/lg/g3-16gb.html" />
+						    <area shape="rect" coords="96,0,190,141" href="/lg/g3-16gb.html" />
+							    <area shape="rect" coords="191,0,241,141" href="/lg/" />
+							  </map>
+							</li>
+							<li>
+							  <img src="images/tmpltcms/mini_teaser/htc.jpg" border="0" usemap="#miniMap_5" />
+							  <map name="miniMap_5">
+							    <area shape="rect" coords="0,0,95,141" href="/htc/one-m9.html" />
+							    <area shape="rect" coords="96,0,190,141" href="/htc/desire-eye.html" />
+							    <area shape="rect" coords="191,0,241,141" href="/htc/" />
+							  </map>
+							</li>
+							<li>
+                                                          <img src="images/tmpltcms/mini_teaser/apple.jpg" border="0" usemap="#miniMap_6" />
+							  <map name="miniMap_6">
+                                                                <area shape="rect" coords="0,0,95,141" href="/apple/iphone.html#iphone-6" />
+							    <area shape="rect" coords="96,0,190,141" href="/apple/iphone.html#iphone-6-plus" />
+							    <area shape="rect" coords="191,0,241,141" href="/apple/" />
+							  </map>
+							</li>
+							<li>
+							  <img src="images/tmpltcms/mini_teaser/motorola.jpg" border="0" usemap="#miniMap_7" />
+							  <map name="miniMap_7">
+							    <area shape="rect" coords="0,0,95,141" href="/motorola/moto-360.html" />
+							    <area shape="rect" coords="96,0,190,141" href="/motorola/nexus-6-32gb.html" />
+							    <area shape="rect" coords="191,0,241,141" href="/motorola/" />
+							  </map>
+							</li>
+							<li>
+							  <img src="images/tmpltcms/mini_teaser/blackberry.jpg" border="0" usemap="#miniMap_8" />
+                                                          <map name="miniMap_8">
+							    <area shape="rect" coords="0,0,95,141" href="/blackberry/classic.html" />
+                                                            <area shape="rect" coords="96,0,190,141" href="/blackberry/passport.html" />
+							    <area shape="rect" coords="191,0,241,141" href="/blackberry" />
+							  </map>
+							</li>
+						</ul>
+					</div>
+				</div>
+</div></td>
+  </tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:244px; height:10px; position:relative; top:-10px">
+  <tr>
+    <td style="width:10px; height:10px">
+      <img src="images/tmpltcms/left2.gif" width="10" height="10" alt=""></td>
+    <td class="text" style="vertical-align:middle; width:224px">
+      <img src="images/tmpltcms/bttm.gif" width="224" height="10" alt=""></td>
+    <td style="width:10px">
+      <img src="images/tmpltcms/right2.gif" width="10" height="10" alt=""></td>
+  <tr>
+</table></td>
+  </tr>
+  
+  <tr>
+    <td colspan="4" style="height:80px; padding-left:10px">
+      <table cellpadding="0" cellspacing="0" style="width:750px; height:80px">
+  <tr>
+    <td class="text" style="height:80px; vertical-align:top; text-align:justify">
+      <div style="width:747px; height:80px">
+      <img src="images/tmpltcms/ban_mix.jpg" border="0" alt="" usemap="#imagemap_305">
+      <width="241" height="210" border="0" usemap="imagemap_305" />
+<map name="imagemap_305" id="Map">
+  <area shape="rect" coords="0,0,370,80" href="http://www.sparhandy.de/apple/iphone.html#iphone-6" />
+  <area shape="rect" coords="380,0,750,80" href="http://www.sparhandy.de/htc/one-m9.html">
+</map>
+</div></td>
+  </tr>
+</table>
+<table cellpadding="0" cellspacing="0" style="width:750px; height:10px; position:relative; top:-10px">
+  <tr>
+   <td style="height:10px">
+      </td>
+  </tr>
+</table></td>
+  </tr>
+
+</table>
+            <script type="text/javascript">
+                if (document.getElementById('cmstbl') && document.getElementById('div_startseiten_text'))
+                {
+                    var cmsheight = document.getElementById('cmstbl').style.height;
+                    document.getElementById('div_startseiten_text').style.top = 600 + "px";
+                }
+
+                if (document.getElementById('div_startseiten_text'))
+                {
+                    document.getElementById('cmstbl').style.marginBottom = 150 + "px";
+                }
+            </script>
+        </div>
+        <!-- no search end -->
+    
+<link rel="stylesheet" href="/css/startseitenTeaser.css" type="text/css">
+
+<script type="text/javascript" src="/js/jquery.tinycarousel.min.js"></script>
+<script type="text/javascript" src="/js/jquery.lwtCountdown-1.0.js"></script>
+<script type="text/javascript" src="/js/startTeaser.min.js"></script>
+<script type="text/javascript" src="/js/mobileCookieRedirectFooter.js"></script>
+<script type="text/javascript" src="/js/event-tracking.js?nc=2015-02-05"></script>
+<script type="text/javascript" src="/js/main.js?nc=2015-02-05"></script>
+        </div>
+        <div class="clearfix"></div>
+        
+<div id="seotext">
+<div id="textcontent"><h3>Ein Handy mit Vertrag l&auml;sst sich im Handyshop Sparhandy ganz leicht bestellen</h3>
+<p>Bei uns im <a style="text-decoration: underline;" href="http://www.sparhandy.de/handy-shop/" target="_self">Handyshop</a> wird Ihr Handy online Kauf zum Erlebnis. Mit durchdachten Features wie z.B. der Handysuche oder der Tarifsuche kombinieren Sie einfach einen der passenden <a style="text-decoration: underline;" href="http://www.sparhandy.de/tarifsuche.html#nav" target="_self">Handytarife</a> mit Ihrem Wunsch Handy. Ob Vieltelfonierer (Flatrate) oder Wenigtelefonierer (Nur Karte) bei uns finden Sie garantiert Ihr passendes Handy und den dazu passenden <a style="text-decoration: underline;" href="http://www.sparhandy.de/handy-vertrag/" target="_self">Handy Vertrag</a>.  <br /> <br /> Unsere <a style="text-decoration: underline;" href="http://www.sparhandy.de/handys/" target="_self">Handys</a> bekommen Sie selbstverst&auml;ndlich mit dem passenden Tarif. Sie ben&ouml;tigen eine <a style="text-decoration: underline;" href="http://www.sparhandy.de/flatrate/" target="_self">Handy Flatrate</a> oder einen Einsteigertarif? Wir finden in jedem Fall den passenden Tarif f&uuml;r Sie.   Wenn Sie ihr <a style="text-decoration: underline;" href="http://www.sparhandy.de/mobiltelefon/" target="_self">Mobiltelefon</a> nicht nur zum telefonieren sondern zum Surfen im Internet ben&ouml;tigen bieten unsere <a style="text-decoration: underline;" href="http://www.sparhandy.de/handy-vertrag/handyvertraege.html" target="_self">g&uuml;nstigen Handyvertr&auml;ge</a> Ihnen eine passende Auswahl. Seit Juli 2014 bieten wir auch eigene Allnet-Flat Tarife im D-Netz an und vermarkten diese auch &uuml;ber unseren Teleshopping-Kanal: Sparhandy.TV</p>
+<p>Ein Blick lohnt sich auf jeden Fall &ndash; <a style="text-decoration: underline;" href="http://www.sparhandy.de/handy-kaufen/" target="_self">Handy kaufen</a> bei Sparhandy.de. Neben Handyvert&auml;gen vermarkten wir seit kurzem auch extrem g&uuml;nstige Festnetz-Anschl&uuml;sse mit Internet-Zugang auf Sparkabel.de.</p><div class="clearfix"></div>
+</div>
+</div><script type="text/javascript" src="/js/jquery.scrollTo-min.js"></script>
+
+<div class="sh_footer">
+    <div class="row row-fluid sh_seoText">
+        <div class="col-box">
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row row-fluid">
+        <div class="col-12">
+            <div class="col-box">
+                <a href="#" class="newsletterPopup">
+                    <img src="/images/site/footer/newsletter_sign-up.png" class="img-fluid" alt="Newsletter Anmeldung" />
+                </a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row row-fluid sh_zahlungsarten">
+        <div class="col-3">
+            <div class="col-box">
+                <div class="sh_footer_category_headline">Sicher Einkaufen</div>
+                <div class="row">
+                    <div class="col-3">
+                        <a href="http://www.safer-shopping.de/zertifikat/sparhandy-de.html" target="_blank">
+                            <img src="/images/site/tuev_sued.png" alt="TÃV SÃ¼d GÃ¼tesiegel" />
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="https://www.trustedshops.de/shop/certificate.php?shop_id=X47CA0CE9799502D70DB66076630624EA" target="_blank">
+                            <img src="/images/site/trusted_shops.png" alt="Trusted Shops Garantiesiegel" />
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="https://www.ekomi.de/bewertungen-sparhandy.html" target="_blank">
+                            <img src="/images/site/ekomi_silber.png" alt="Trusted Shops Garantiesiegel" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-3">
+            <div class="col-box">
+                <div class="sh_footer_category_headline">Unsere Zahlungsarten</div>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="#" class="zahlungsInfosOpen">
+                            <img src="/images/site/footer/Zahlung/lastschrift.png" alt="Zahlart Lastschrift" />
+                       </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#" class="zahlungsInfosOpen">
+                            <img src="/images/site/footer/Zahlung/master-card.png" alt="Zahlart Master Card" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <a href="#" class="zahlungsInfosOpen">
+                            <img src="/images/site/footer/Zahlung/paypal.png" alt="Zahlart PayPal" />
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#" class="zahlungsInfosOpen">
+                            <img src="/images/site/footer/Zahlung/sofort-ueberweisung.png" alt="Zahlart Sofort Ãberweisung" />
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#" class="zahlungsInfosOpen">
+                            <img src="/images/site/footer/Zahlung/visa.png" alt="Zahlart Visa" />
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a href="#" class="zahlungsInfos zahlungsInfosOpen">weitere Infos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="col-box">
+                <div class="sh_footer_category_headline">Wir versenden mit</div>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="/images/site/footer/Versand/dhl-gogreen.png" alt="Versand DHL" />
+                    </div>
+                    <div class="col-4">
+                        <img src="/images/site/footer/Versand/dhl-express.png" alt="Versand DHL Express" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 sh_social">
+            <div class="col-box">
+                <div class="sh_footer_category_headline">Social Media</div>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="http://www.sparhandy.de/blog/" target="_blank">
+                            <img src="/images/site/footer/Social/blog.png" alt="Facebook Sparhandy" class="pull-left" />
+                            <span class="pull-left">Blog</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.facebook.com/sparhandy.de" target="_blank">
+                            <img src="/images/site/footer/Social/facebook.png" alt="Facebook Sparhandy" class="pull-left" />
+                            <span class="pull-left">Facebook</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://plus.google.com/+sparhandy/posts" target="_blank">
+                            <img src="/images/site/footer/Social/google-plus.png" alt="Google+ Sparhandy" class="pull-left" />
+                            <span class="pull-left">Google Plus</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://twitter.com/sparhandy_de" target="_blank">
+                            <img src="/images/site/footer/Social/twitter.png" alt="Twitter Sparhandy" class="pull-left" />
+                            <span class="pull-left">Twitter</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.youtube.com/user/SparhandyGmbH" target="_blank">
+                            <img src="/images/site/footer/Social/youtube.png" alt="Youtube Sparhandy" class="pull-left" />
+                            <span class="pull-left">Youtube</span>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.xing.com/companies/sparhandygmbh" target="_blank">
+                            <img src="/images/site/footer/Social/xing.png" alt="XING Sparhandy" class="pull-left">
+                            <span class="pull-left">XING</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row row-fluid">
+        <div class="col-3">
+            <div class="col-box">
+                <div class="row">
+                    <div class="sh_footer_category_headline">Ãber Sparhandy</div>
+                    <div class="col-12">
+                        <a href="https://www.sparhandy-gmbh.de" target="_blank">Unternehmen</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="https://www.sparhandy-gmbh.de/unternehmen/" target="_blank">Ãber uns</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="https://www.sparhandy-gmbh.de/karriere/" target="_blank">Jobs & Karriere</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="https://www.sparhandy-gmbh.de/presse/" target="_blank">Presse</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="https://www.sparhandy-gmbh.de/unternehmen/flagship-store/" target="_blank">Flagship Store</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="https://www.sparhandy-gmbh.de/unternehmen/partnersiegel/" target="_blank">Partnersiegel</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="https://www.sparhandy-gmbh.de/unternehmen/partnerprogramm/" target="_blank">Partnerprogramm</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/service-datenschutz.html">Datenschutz</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/unternehmen-impressum.html">Impressum</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/unternehmen-agb.html">AGB</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="col-box">
+                <div class="row">
+                    <div class="sh_footer_category_headline">Kontakt und Service</div>
+                    <div class="col-12">
+                        <a href="/hilfe/#footer">Hilfe &amp; Kontakt</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="http://www.conbato.de/">GeschÃ¤ftskunden</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/service-vorteile-sparhandy.html">Vorteile Sparhandy</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/service-datenschutz.html">Datenschutz</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/service-reparatur.html">Reparatur und Retouren</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/service-freunde-werben.html ">Freunde werben</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/service-kuendigung.html">KÃ¼ndigungsassistent</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/ankauf/">Ankauf</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="col-box">
+                <div class="row">
+                    <div class="sh_footer_category_headline">Top Tarife</div>
+                    <div class="col-12">
+                        <a href="/mobilcom-debitel/">Mobilcom Debitel</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/vieltelefonierer.html">Vieltelefonierer</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/normaltelefonierer.html">Normaltelefonierer</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/wenigtelefonierer.html">Wenigtelefonierer</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/tarifstruktur.html">Tarifstruktur</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="col-box">
+                <div class="row">
+                    <div class="sh_footer_category_headline">Top Kategorien</div>
+                    <div class="col-12">
+                        <a href="/smartphones/android.html">Android</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/samsung/galaxy/">Galaxy</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/gadgets/">Gadgets</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/lumia/">Lumia</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/images/_landingpages/hersteller/google/nexus-6/">Nexus</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/smartphones/windows-phone.html">Windows</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/sony/xperia-z3.html">Xperia</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/seniorenhandy" title="Zu den Seniorenhandys">Seniorenhandys</a>
+                    </div>
+                    <div class="col-12">
+                        <a href="/phablet" title="Phablet mit Vertrag">Phablet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row row-fluid sh_sponsoring">
+        <div class="col-6">
+            <div class="col-box">
+                <a href="http://www.sparhandy.de/blog/sparhandy-goes-2-bundesliga/">
+                    <img src="/images/site/footer/Sponsoring/fsv-frankfurt.png" alt="Sponsoring FSV Frankfurt" class="pull-left" />
+                    <span class="pull-left">Sparhandy ist Hauptsponsor des FSV Frankfurt</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="col-box">
+                <a href="https://www.sparhandy-gmbh.de/presse/pressemitteilungen/sparhandy-und-1-fc-koeln-starten-erstes-tippspiel-mit-livespieldaten/">
+                    <img src="/images/site/footer/Sponsoring/fc-koeln.png" alt="Sponsoring FSV Frankfurt" class="pull-left" />
+                    <span class="pull-left">Sparhandy ist Exklusivpartner des 1. FC KÃ¶ln</span>
+                </a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row row-fluid">
+        <div class="col-12">
+            <div class="col-box">
+                <p>
+                    <sup>*</sup> Einmaliger Preis der Hardware inklusive der derzeit gÃ¼ltigen Mehrwertsteuer. Das Angebot gilt nur
+                    bei Abschluss eines Mobilfunkvertrages, durch den weitere Kosten entstehen kÃ¶nnen. Einzelheiten entnehmen Sie
+                    bitte den Tarifdetails des jeweiligen Tarifs. Streichpreise beziehen sich auf den vorherigen Preis auf
+                    Sparhandy.de. Die Auslieferung Ihrer Bestellung erfolgt kostenfrei per DHL. Druckfehler, IrrtÃ¼mer und
+                    Ãnderungen vorbehalten. Abbildungen Ã¤hnlich. Alle Angebote unverbindlich und nur solange Vorrat reicht.
+                </p>
+                <p>
+                    <sup>1</sup> GerÃ¤tekauf ohne Mobilfunkvertrag: Einmaliger Preis der Hardware inklusive der derzeit gÃ¼ltigen
+                    Mehrwertsteuer. Die Lieferung erfolgt versandkostenfrei per DHL. Druckfehler, IrrtÃ¼mer und Ãnderungen
+                    vorbehalten. Abbildungen Ã¤hnlich. Alle Angebote unverbindlich und nur solange der Vorrat reicht.
+                </p>
+                <p>
+                    <sup>2</sup> Einzelheiten zu der GrundgebÃ¼hr sowie der AnschlussgebÃ¼hr entnehmen Sie bitte den Tarifdetails
+                    des jeweiligen Tarifs. Streichpreise beziehen sich auf die unverbindliche Preisempfehlung des Netzbetreibers.
+                </p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="row row-fluid sh_slogan">
+        <div class="col-12 text-center">
+            <div class="col-box">
+                <img src="/images/site/footer/so-geht-mobil.png" alt="So geht mobil" />
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- BEGIN etracker code ETRC 3.0 -->
+<script
+    type="text/javascript">document.write(String.fromCharCode(60) + "script type=\"text/javascript\" src=\"http" + ("https:" == document.location.protocol ? "s" : "") + "://code.etracker.com/t.js?et=OWxa23\">" + String.fromCharCode(60) + "/script>");</script>
+<!-- etracker CODE END -->
+
+<script type="text/javascript">
+    var et_lpage = 236582;
+    var et_easy = 0;
+    var et_pagename = "__INDEX__Startseite+%28Index%29";
+    var et_areas = "Sparhandy/Startseite";
+        var et_ilevel = 0;
+    var et_url = "";
+    var et_se = 6;
+</script>
+<!-- etracker PARAMETER END -->
+<script type="text/javascript">_etc();
+    _gaq.push(['_trackPageview']);</script>
+
+
+<script type="text/javascript">
+    var google_conversion_id = 1055257487;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "666666";
+    var google_conversion_label = "kE0pCKu3oAEQj-eX9wM";
+    var google_conversion_value = 0;
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+    <script type="text/javascript">
+var sparhandy = window.sparhandy || {};
+sparhandy.trackingDataLayer = window.sparhandy.trackingDataLayer || {};
+var dataLayer = window.dataLayer || [];
+dataLayer.push({"ecommerce":{"currencyCode":"EUR"}});
+sparhandy.trackingDataLayer.criteo = (function (exports) {
+exports = [{"event":{"setSiteType":{"type":"d"}}}];
+return exports;
+})(window.sparhandy.trackingDataLayer.criteo || {});
+sparhandy.trackingDataLayer.googleTrustedStore = (function (exports) {
+exports = {"purchase":[]};
+return exports;
+})(window.sparhandy.trackingDataLayer.googleTrustedStore || {});
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-ML2734');
+</script>
+<noscript>
+<iframe src="//www.googletagmanager.com/ns.html?id=GTM-ML2734" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>    <!-- Popup Fenster Newsletter -->
+
+
+<div class="lightbox-overlay newsletterJs"></div>
+<div class="lightbox newsletterJs">
+    <div class="lightbox-content-box">
+        <div class="lightbox-content-inner">
+            <div class="lightbox-content-inner-title">
+                <div class="title">Sparhandy-Newsletter - Jetzt anmelden und gewinnen!</div>
+                <a href="javascript:void(0);" class="closebox newsletterJs btn-close-title"><img src="/images/site/close_x.png"
+                                                                                                 alt="schlie&szlig;en"/></a>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="lightbox-content-inner-text">
+                <div class="subtitle"><img class="nl-banner" src="/images/site/newsletter/img_iphone_gewinnspiel_2015.png"></div>
+
+                <p>
+
+                <form name="newsletter_anmeldung" action="/service-newsletter-bestaetigung.html" method="post">
+                    <div class="nl-divForm">
+                        <div class="form-group">
+                            <div class="nlFormLeft pull-left text-right"></div>
+                            <div class="nlFormRight pull-right nlErrorFeld">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="nlFormLeft pull-left text-right">
+                                <label for="">Anrede*</label>
+                            </div>
+                            <div class="nlFormRight pull-right nlRadio text-left">
+                                <input name="newsletter_anmeldung_anrede" type="radio" value="Herr"/> Herr
+                                <input name="newsletter_anmeldung_anrede" type="radio" value="Frau" class="nlRadioFrau"/> Frau
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="nlFormLeft pull-left text-right">
+                                <label for="">Vorname*</label>
+                            </div>
+                            <div class="nlFormRight pull-right">
+                                <input name="newsletter_anmeldung_vorname" type="text" placeholder=""/>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="nlFormLeft pull-left text-right">
+                                <label for="">Nachname*</label>
+                            </div>
+                            <div class="nlFormRight pull-right">
+                                <input name="newsletter_anmeldung_nachname" type="text" placeholder=""/>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="nlFormLeft pull-left text-right">
+                                <label for="">E-Mail*</label>
+                            </div>
+                            <div class="nlFormRight pull-right">
+                                <input name="newsletter_anmeldung_email" type="text" placeholder=""/>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="nlFooter">
+                        <p>
+                            Der Sparhandy-Newsletter informiert Sie w&ouml;chentlich &uuml;ber unsere besten Angebote. Erfahren
+                            Sie
+                            vor allen anderen von neuen Aktionen und Deals!
+                            <br/>
+                            <br/>
+                            Mit der Anmeldung zum Newsletter gelten die Sparhandy <a class="lightboxLink"
+                                                                                     href="/service-datenschutz.html"
+                                                                                     target="_blank">Datenschutzbestimmungen</a>.
+                            Eine
+                            Abmeldung ist jederzeit &uuml;ber den Link &quot;Newsletter abbestellen&quot; am Ende Ihres
+                            Newsletters m&ouml;glich.
+                            Bei best&auml;tigter Anmeldung nehmen Sie automatisch am Gewinnspiel teil. Es gelten die Sparhandy
+                            <a class="lightboxLink" href="/newsletter-gewinnspiel-teilnahmebedingungen.html" target="_blank">Gewinnspiel-Teilnahmebedingungen</a>.
+                        </p>
+                        <span class="pull-left nlPflichtfeld">* Pflichtfelder</span>
+                        <input type="hidden" name="cmdOK" value="1"/>
+                        <input type="hidden" name="newsletter_teilnahme" value="1"/>
+                        <input type="hidden" name="newsletter_popupTeilnahme" value="1"/>
+                        <input type="submit" class="pull-right" value="Jetzt anmelden &raquo"/>
+
+                        <div class="clearfix"></div>
+                    </div>
+
+                </form>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Popup Fenster Newsletter Ende -->
+
+<!-- PopUp Zahlarten Footer -->
+
+<div class="lightbox-overlay zahlarten"></div>
+<div class="lightbox zahlarten">
+    <div class="lightbox-content-box">
+        <div class="lightbox-content-inner">
+            <div class="lightbox-content-inner-title">
+                <div class="title"></div>
+                <a href="javascript:void(0);" class="closebox zahlarten btn-close-title"><img src="/images/site/close_x.png"
+                                                                                              alt="schlie&szlig;en"/></a>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="lightbox-content-inner-text">
+                <div class="subtitle">
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Zahlungsarten</th>
+                            <th>GerÃ¤te mit Vertrag</th>
+                            <th>GerÃ¤te ohne Vertrag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/Lastschrift.png" alt="Lastschrift" /></td>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/ja_24px.png" /></td>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/nein_24px.png" /></td>
+                        </tr>
+                        <tr>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/MasterCardo.png" alt="Master Card" /></td>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/nein_24px.png" /></td>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/ja_24px.png" /></td>
+                        </tr>
+                        <tr>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/Visa.png" alt="Visa" /></td>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/nein_24px.png" /></td>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/ja_24px.png" /></td>
+                        </tr>
+                        <tr>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/Sofort-Ueberweisung.png" alt="Sofort Ãberweisung" /></td>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/nein_24px.png" /></td>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/ja_24px.png" /></td>
+                        </tr>
+                        <tr>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/PayPal.png" alt="Visa" /></td>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/nein_24px.png" /></td>
+                            <td><img src="/images/site/footer/ZahlungsartenPopup/ja_24px.png" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>    </body>
+    <!-- Sparhandy Live -->
+    </html>
