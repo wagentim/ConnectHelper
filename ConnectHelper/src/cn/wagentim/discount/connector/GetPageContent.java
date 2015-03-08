@@ -33,7 +33,6 @@ public class GetPageContent extends AbstractThread
 
         try
         {
-
             HttpGet httpget = new HttpGet(uri);
             CloseableHttpResponse response = null;
 

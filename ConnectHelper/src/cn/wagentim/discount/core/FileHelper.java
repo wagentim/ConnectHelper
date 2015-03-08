@@ -13,7 +13,7 @@ import java.nio.file.StandardOpenOption;
 
 import cn.wagentim.basicutils.BasicUtils;
 import cn.wagentim.basicutils.StringConstants;
-import cn.wagentim.discount.utils.Validator;
+import cn.wagentim.basicutils.Validator;
 
 public final class FileHelper
 {

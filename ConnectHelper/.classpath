@@ -6,6 +6,5 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/BasicUtils"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/QLogger"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Persistance"/>
-	<classpathentry kind="lib" path="libs/jsoup-1.8.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
