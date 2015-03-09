@@ -1,10 +1,9 @@
 package cn.wagentim.discount.connector;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
@@ -15,27 +14,23 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import cn.wagentim.basicutils.FileHelper;
 import cn.wagentim.basicutils.Validator;
-import cn.wagentim.discount.utils.FileType;
+import cn.wagentim.discount.utils.HttpHelper;
 import cn.wagentim.entities.ResourceEntity;
 
 public class GetFile extends AbstractThread
 {
-
-	private final String[] links;
-	private final int type;
 	private ResourceEntity resource;
+	private final URI uri;
 
-	public GetFile(final String[] links, final int type)
+	public GetFile(final URI uri)
 	{
-		this.links = links;
-		this.type = type;
+		this.uri = uri;
 	}
 
 	public void run()
 	{
-		if( Validator.isNullOrEmpty(links) || type == FileType.TYPE_UNKNOWN )
+		if( Validator.isNull(uri) )
 		{
 			return;
 		}
@@ -43,32 +38,44 @@ public class GetFile extends AbstractThread
 		HttpClientContext context = HttpClientContext.create();
         context.setCookieStore(getCookieStore());
         CloseableHttpClient httpclient = HttpClients.createDefault();
-		
-        for(String link : links)
-        {
-        	doGetFile(link, context, httpclient);
-        }
-	}
-
-	private void doGetFile(String link, HttpClientContext context, CloseableHttpClient httpclient)
-	{
+        
 		try
 		{
-			CloseableHttpResponse response = httpclient.execute(new HttpGet(link), context);
+			CloseableHttpResponse response = httpclient.execute(new HttpGet(uri), context);
 			try
 			{
 				if (response.getStatusLine().getStatusCode() < 300)
 				{
 					HttpEntity entity = response.getEntity();
 					long fileSize = entity.getContentLength();
-					resource = new ResourceEntity();
-					assignValues(resource, entity);
 					
-					BufferedInputStream bis = new BufferedInputStream(entity.getContent());
-					int inByte;
-					while((inByte = bis.read()) != -1) 
-
+					if( fileSize > 0 )
+					{
+						resource = new ResourceEntity();
+						resource.setLength(fileSize);
+						resource.setName(HttpHelper.getFileName(uri));
+						
+						byte[] data = saveByteArray(entity);
+						
+						if( null == data )
+						{
+							resource = null;
+						}
+						else
+						{
+							resource.setData(data);
+						}
+						
+					}
+					else
+					{
+						resource = null;
+					}
 					EntityUtils.consume(entity);
+				}
+				else
+				{
+					resource = null;
 				}
 			} finally
 			{
@@ -76,25 +83,49 @@ public class GetFile extends AbstractThread
 				response.close();
 			}
 
-		} catch (ClientProtocolException ex)
+		} 
+		catch (ClientProtocolException ex)
 		{
 			ex.printStackTrace();
-		} catch (IOException ex)
+		} 
+		catch (IOException ex)
 		{
 			ex.printStackTrace();
 		}
 		
 	}
-
-	private void assignValues(ResourceEntity resource, HttpEntity entity)
+	
+	private byte[] saveByteArray(final HttpEntity entity)
 	{
-		if( Validator.isNull(resource) || Validator.isNull(entity) )
+		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+		final byte[] buffer = new byte[1024];
+		InputStream ins;
+		try
 		{
-			return;
+			ins = entity.getContent();
+			int number = 0;
+			while( ( number = ins.read(buffer) ) != -1 )
+			{
+				bos.write(buffer, 0, number);
+			}
+			
+			byte[] result = bos.toByteArray();
+			
+			bos.close();
+			ins.close();
+			
+			return result;
+		} 
+		catch (IllegalStateException | IOException e)
+		{
+			e.printStackTrace();
 		}
 		
-		resource.setLength(entity.getContentLength());
-		
+		return null;
 	}
-
+	
+	public ResourceEntity getResource()
+	{
+		return resource;
+	}
 }

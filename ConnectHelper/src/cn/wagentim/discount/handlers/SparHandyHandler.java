@@ -11,22 +11,24 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import cn.wagentim.basicutils.Validator;
+import cn.wagentim.basicutils.StringConstants;
 import cn.wagentim.discount.connector.GetFile;
 import cn.wagentim.discount.connector.GetPageContent;
 import cn.wagentim.discount.core.FileHelper;
-import cn.wagentim.discount.sites.IWebsite;
-import cn.wagentim.discount.sites.SparHandy;
 import cn.wagentim.discount.utils.FileType;
+import cn.wagentim.entities.WebSiteEntity;
+import cn.wagentim.managers.IPersistanceManager;
+import cn.wagentim.managers.ObjectDBManager;
 
 public class SparHandyHandler extends AbstractSiteHandler
 {
-    private static final String tmpPath = "C:/tmp/bin/tmp.txt";
-    
+	private IPersistanceManager manager = new ObjectDBManager();
+	private static Long id = 0L;
 
-	public SparHandyHandler(final IWebsite site)
+	public SparHandyHandler(final WebSiteEntity site)
 	{
 		super(site);
+		manager.connectDB(StringConstants.EMPTY_STRING, 0, "spar_handy");
 	}
 
 	@Override
@@ -45,19 +47,14 @@ public class SparHandyHandler extends AbstractSiteHandler
 	public void grabDiscountPicOnMainPage()
 	{
 	    URIBuilder builder = new URIBuilder();
-	    builder.setScheme("http");
-	    builder.setHost(site.getDomain());
+	    builder.setScheme(site.getSchema());
+	    builder.setHost(site.getHost());
 
 	    try
         {
-            GetPageContent getPage = new GetPageContent(builder.build());
+            GetPageContent getPage = new GetPageContent(builder.build(), site);
             getPage.run();
-            String content = getPage.getPageContent();
-
-            if( !Validator.isNullOrEmpty(content) )
-            {
-                FileHelper.writeToFile(content, tmpPath, Charset.forName("utf-8"));
-            }
+            id = manager.addOrUpdateEntity(site);
         }
         catch ( URISyntaxException e )
         {
@@ -77,6 +74,7 @@ public class SparHandyHandler extends AbstractSiteHandler
 	        {
 	            imgs.addAll(getImages(e));
 	        }
+	        
 	        downloadImages(imgs);
 	    }
 	    

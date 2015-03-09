@@ -1,12 +1,13 @@
 package cn.wagentim.discount.handlers;
 
-import cn.wagentim.discount.sites.IWebsite;
+import cn.wagentim.entities.WebSiteEntity;
+
 
 public abstract class AbstractSiteHandler implements ISiteHandler
 {
-	protected final IWebsite site;
+	protected final WebSiteEntity site;
 
-	protected AbstractSiteHandler(final IWebsite site)
+	protected AbstractSiteHandler(final WebSiteEntity site)
 	{
 		this.site = site;
 	}

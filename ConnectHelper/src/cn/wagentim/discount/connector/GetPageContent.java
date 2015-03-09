@@ -13,15 +13,17 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 import cn.wagentim.basicutils.StringConstants;
+import cn.wagentim.entities.WebSiteEntity;
 
 public class GetPageContent extends AbstractThread
 {
     private final URI uri;
-    private String result = StringConstants.EMPTY_STRING;
-
-    public GetPageContent(URI uri)
+    private final WebSiteEntity site;
+    
+    public GetPageContent(URI uri, WebSiteEntity site)
     {
         this.uri = uri;
+        this.site = site;
     }
 
     public void run()
@@ -42,7 +44,11 @@ public class GetPageContent extends AbstractThread
 
                 if ( HttpStatus.SC_OK == response.getStatusLine().getStatusCode() )
                 {
-                    result = EntityUtils.toString(response.getEntity());
+                    site.setPageContent(EntityUtils.toString(response.getEntity()));
+                }
+                else
+                {
+                	site.setPageContent(StringConstants.EMPTY_STRING);
                 }
 
                 EntityUtils.consume(response.getEntity());
@@ -75,10 +81,4 @@ public class GetPageContent extends AbstractThread
             }
         }
     }
-
-    public String getPageContent()
-    {
-        return result;
-    }
-
 }
