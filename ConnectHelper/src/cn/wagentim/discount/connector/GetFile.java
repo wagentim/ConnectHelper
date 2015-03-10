@@ -34,11 +34,11 @@ public class GetFile extends AbstractThread
 		{
 			return;
 		}
-		
+
 		HttpClientContext context = HttpClientContext.create();
         context.setCookieStore(getCookieStore());
         CloseableHttpClient httpclient = HttpClients.createDefault();
-        
+
 		try
 		{
 			CloseableHttpResponse response = httpclient.execute(new HttpGet(uri), context);
@@ -48,15 +48,15 @@ public class GetFile extends AbstractThread
 				{
 					HttpEntity entity = response.getEntity();
 					long fileSize = entity.getContentLength();
-					
+
 					if( fileSize > 0 )
 					{
 						resource = new ResourceEntity();
 						resource.setLength(fileSize);
 						resource.setName(HttpHelper.getFileName(uri));
-						
-						byte[] data = saveByteArray(entity);
-						
+
+						byte[] data = getContentAsByteArray(entity.getContent());
+
 						if( null == data )
 						{
 							resource = null;
@@ -65,7 +65,7 @@ public class GetFile extends AbstractThread
 						{
 							resource.setData(data);
 						}
-						
+
 					}
 					else
 					{
@@ -79,51 +79,56 @@ public class GetFile extends AbstractThread
 				}
 			} finally
 			{
-				
+
 				response.close();
 			}
 
-		} 
+		}
 		catch (ClientProtocolException ex)
 		{
 			ex.printStackTrace();
-		} 
+		}
 		catch (IOException ex)
 		{
 			ex.printStackTrace();
 		}
-		
+
 	}
-	
-	private byte[] saveByteArray(final HttpEntity entity)
-	{
-		ByteArrayOutputStream bos = new ByteArrayOutputStream();
-		final byte[] buffer = new byte[1024];
-		InputStream ins;
-		try
-		{
-			ins = entity.getContent();
-			int number = 0;
-			while( ( number = ins.read(buffer) ) != -1 )
-			{
-				bos.write(buffer, 0, number);
-			}
-			
-			byte[] result = bos.toByteArray();
-			
-			bos.close();
-			ins.close();
-			
-			return result;
-		} 
-		catch (IllegalStateException | IOException e)
-		{
-			e.printStackTrace();
-		}
-		
-		return null;
-	}
-	
+
+    private byte[] getContentAsByteArray(final InputStream content)
+    {
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        byte[] tmp = new byte[4096];
+        int ret = 0;
+
+        try
+        {
+            while((ret = content.read(tmp)) > 0)
+            {
+                bos.write(tmp, 0, ret);
+            }
+        }
+        catch ( IOException e )
+        {
+            e.printStackTrace();
+            return null;
+        }
+
+        byte[] myArray = bos.toByteArray();
+
+        try
+        {
+            bos.close();
+        }
+        catch ( IOException e )
+        {
+            e.printStackTrace();
+            return null;
+        }
+
+        return myArray;
+    }
+
 	public ResourceEntity getResource()
 	{
 		return resource;

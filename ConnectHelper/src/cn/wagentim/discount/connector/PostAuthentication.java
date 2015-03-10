@@ -14,7 +14,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import cn.wagentim.discount.sites.IWebsite;
+import cn.wagentim.entities.WebSiteEntity;
 
 
 /**
@@ -25,9 +25,9 @@ import cn.wagentim.discount.sites.IWebsite;
  */
 public class PostAuthentication extends AbstractThread
 {
-    private final IWebsite site;
+    private final WebSiteEntity site;
 
-    public PostAuthentication(final IWebsite site)
+    public PostAuthentication(final WebSiteEntity site)
     {
         this.site = site;
     }
@@ -37,11 +37,10 @@ public class PostAuthentication extends AbstractThread
 	{
 	    CredentialsProvider credsProvider = new BasicCredentialsProvider();
         credsProvider.setCredentials(
-                new AuthScope(site.getHost(), site.getPort()),
+                new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT),
                 new UsernamePasswordCredentials(site.getUserName(), site.getPassword()));
 
         CloseableHttpClient httpclient = HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
-
         HttpClientContext context = HttpClientContext.create();
         context.setCookieStore(getCookieStore());
 
