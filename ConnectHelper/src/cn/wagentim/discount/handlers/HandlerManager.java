@@ -3,6 +3,7 @@ package cn.wagentim.discount.handlers;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.wagentim.discount.handler.telecom.SparHandyHandler;
 import cn.wagentim.discount.sites.SiteFactory;
 
 public final class HandlerManager

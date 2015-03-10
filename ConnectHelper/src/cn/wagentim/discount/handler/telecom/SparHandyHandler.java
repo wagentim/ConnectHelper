@@ -1,4 +1,4 @@
-package cn.wagentim.discount.handlers;
+package cn.wagentim.discount.handler.telecom;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -20,6 +20,7 @@ import org.jsoup.select.Elements;
 import cn.wagentim.basicutils.StringConstants;
 import cn.wagentim.discount.connector.GetPageContent;
 import cn.wagentim.discount.connector.PostData;
+import cn.wagentim.discount.handlers.AbstractSiteHandler;
 import cn.wagentim.entities.WebSiteEntity;
 import cn.wagentim.managers.IPersistanceManager;
 import cn.wagentim.managers.ObjectDBManager;
