@@ -1,4 +1,4 @@
-package cn.wagentim.discount.utils;
+package cn.wagentim.connect.utils;
 
 import java.net.URI;
 

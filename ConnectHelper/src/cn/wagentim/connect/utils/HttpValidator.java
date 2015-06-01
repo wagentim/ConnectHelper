@@ -1,4 +1,4 @@
-package cn.wagentim.discount.utils;
+package cn.wagentim.connect.utils;
 
 public final class HttpValidator
 {
