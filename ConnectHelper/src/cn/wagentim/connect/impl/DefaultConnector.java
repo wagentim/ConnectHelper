@@ -3,10 +3,14 @@ package cn.wagentim.connect.impl;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -264,6 +268,17 @@ public class DefaultConnector implements IConnector
     	DataInfo dataInfo = getDataInfo(uri);
     	
     	File f = new File(filePath, dataInfo.getName());
+    	RandomAccessFile file = null;
+    	
+    	try
+		{
+			file = new RandomAccessFile(f, "rw");
+		} 
+    	catch (FileNotFoundException e2)
+		{
+			e2.printStackTrace();
+		}
+    	
     	boolean continueDownload = false;
     	
     	if( !f.exists() )
@@ -333,27 +348,36 @@ public class DefaultConnector implements IConnector
             }
             
             BufferedInputStream bis = new BufferedInputStream(response.getEntity().getContent());
-        	BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(f));
+            
+            ByteBuffer bb = ByteBuffer.allocate(1024);
         	StringBuffer sb = new StringBuffer();
+        	
+        	FileChannel fc = file.getChannel();
+        	
+        	if( continueDownload )
+        	{
+        		fc.position(f.length());
+        	}
+        	
         	int inByte;
         	long length = dataInfo.getLength();
-        	long downloaded = 0L;
+        	long downloaded = continueDownload ? f.length() : 0L;
         	
-        	while((inByte = bis.read()) != -1)
+        	while((inByte = bis.read(bb.array())) != -1)
         	{
         		sb.delete(0, sb.length());
-        		bos.write(inByte);
+        		fc.write(bb);
         		downloaded += inByte;
         		sb.append(downloaded);
         		sb.append(" / ");
         		sb.append(length);
+        		bb.clear();
         		System.out.println(sb.toString());
         	}
         	
-        	bos.flush();
         	bis.close();
-        	bos.close();
-            
+        	fc.close();
+        	
         }
         catch ( IOException e )
         {
