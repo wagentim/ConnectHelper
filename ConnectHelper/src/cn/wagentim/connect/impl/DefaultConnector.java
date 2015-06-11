@@ -39,28 +39,6 @@ import cn.wagentim.connect.core.IConnector;
  */
 public class DefaultConnector implements IConnector
 {
-	private static final class DataInfo
-	{
-		private final String name;
-		private final long length;
-		
-		public DataInfo(String name, long length)
-		{
-			this.name = name;
-			this.length = length;
-		}
-
-		public String getName()
-		{
-			return name;
-		}
-
-		public long getLength()
-		{
-			return length;
-		}
-	}
-	
     private HttpClientContext context = null;
     private CloseableHttpClient httpclient = null;
     private CookieStore cookieStore = null;
@@ -168,7 +146,7 @@ public class DefaultConnector implements IConnector
             	return null;
             }
             
-            return parserDataInfo(response.getAllHeaders());
+            return parserDataInfo(response.getAllHeaders(), url);
             
         }
         catch ( IOException e )
@@ -190,21 +168,74 @@ public class DefaultConnector implements IConnector
         }
     }
     
-    private DataInfo parserDataInfo(Header[] allHeaders)
+    private DataInfo parserDataInfo(Header[] allHeaders, String url)
 	{
-    	DataInfo info = new DataInfo(getDataName(), getDataLength());
+    	if( null == allHeaders || allHeaders.length <= 0 || Validator.isNullOrEmpty(url) )
+    	{
+    		return null;
+    	}
+
+    	String fileName = handleFileNameFromURL(url);
+    	
+    	String fileType = null, fileLength = null;
+    	
+    	for( Header header : allHeaders )
+    	{
+    		String key = header.getName();
+    		
+    		if("Content-Type".equals(key))
+    		{
+    			fileType = handleContentType(header);
+    		}
+    		else if("Content-Length".equals(key))
+    		{
+    			fileLength = handleContextLength(header);
+    		}
+    	}
+    	
+    	if( null == fileName )
+    	{
+    		fileName = "tmp." + fileType; 
+    	}
+    	
+    	DataInfo info = new DataInfo(fileName, Long.parseLong(fileLength));
     	
 		return info;
 	}
 
-	private String getDataName()
+	private String handleFileNameFromURL(String url)
 	{
-		return null;
+		int index = url.lastIndexOf("/");
+		String possibleFile = url.substring(index + 1);
+		
+		if( !possibleFile.contains(".") )
+		{
+			return null;
+		}
+		
+		return possibleFile;
 	}
 
-	private long getDataLength()
+	private String handleContextLength(Header header)
 	{
-		return 0;
+		return header.getValue();
+	}
+
+	private String handleContentType(Header header)
+	{
+		String value = header.getValue();
+		int index = value.indexOf("/");
+		if( index >= 0 )
+		{
+			value = value.substring(index + 1);
+		}
+		else
+		{
+			return null;
+		}
+		
+		return value;
+		
 	}
 
 	/**
@@ -214,7 +245,7 @@ public class DefaultConnector implements IConnector
      * @param filePath
      * @param thread
      */
-    public void donwloadResource(String uri, String filePath, int thread, DataInfo dataInfo, boolean overwriteFile)
+    public void donwloadResource(String uri, String filePath, int thread, boolean overwriteFile)
     {
     	// step 1. check the parameters
     	if( Validator.isNullOrEmpty(uri) )
@@ -229,13 +260,19 @@ public class DefaultConnector implements IConnector
     		return;
     	}
     	
-    	String fileName = dataInfo.getName();
+    	DataInfo dataInfo = getDataInfo(uri);
     	
-    	File f = new File(filePath, fileName);
+    	File f = new File(filePath, dataInfo.getName());
     	
     	if( !f.exists() )
     	{
-    		f.createNewFile();
+    		try
+			{
+				f.createNewFile();
+			} catch (IOException e)
+			{
+				e.printStackTrace();
+			}
     	}
     	else if( f.length() == dataInfo.getLength() && !overwriteFile )
 		{
@@ -247,8 +284,6 @@ public class DefaultConnector implements IConnector
     	{
     		thread = 1;
     	}
-    	
-    	
     	
     	URI link = null;
 		
@@ -263,7 +298,7 @@ public class DefaultConnector implements IConnector
 			return;
 		}
     	
-    	logger.info("Process the link: " + uri);
+    	logger.info("Start download data: " + dataInfo.getName());
     	
         HttpGet httpget = new HttpGet(link);
         CloseableHttpResponse response = null;
@@ -277,12 +312,25 @@ public class DefaultConnector implements IConnector
             	return;
             }
             
-            File file = getTargetFile(response, filePath);
-            
             BufferedInputStream bis = new BufferedInputStream(response.getEntity().getContent());
-        	BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
+        	BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(f));
+        	StringBuffer sb = new StringBuffer();
         	int inByte;
-        	while((inByte = bis.read()) != -1) bos.write(inByte);
+        	long length = dataInfo.getLength();
+        	long downloaded = 0L;
+        	
+        	while((inByte = bis.read()) != -1)
+        	{
+        		sb.delete(0, sb.length());
+        		bos.write(inByte);
+        		downloaded += inByte;
+        		sb.append(downloaded);
+        		sb.append(" / ");
+        		sb.append(length);
+        		System.out.println(sb.toString());
+        	}
+        	
+        	bos.flush();
         	bis.close();
         	bos.close();
             
