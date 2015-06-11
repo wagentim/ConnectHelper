@@ -18,6 +18,7 @@ import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicHeader;
 import org.apache.http.util.EntityUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -263,12 +264,14 @@ public class DefaultConnector implements IConnector
     	DataInfo dataInfo = getDataInfo(uri);
     	
     	File f = new File(filePath, dataInfo.getName());
+    	boolean continueDownload = false;
     	
     	if( !f.exists() )
     	{
     		try
 			{
 				f.createNewFile();
+				
 			} catch (IOException e)
 			{
 				e.printStackTrace();
@@ -278,6 +281,10 @@ public class DefaultConnector implements IConnector
 		{
 			logger.error("DefaultConnector#donwloadResource File already existed. Abort!");
 			return;
+    	}
+    	else
+    	{
+    		continueDownload = true;
     	}
     	
     	if( thread < 1 || thread > 5 )
@@ -302,6 +309,19 @@ public class DefaultConnector implements IConnector
     	
         HttpGet httpget = new HttpGet(link);
         CloseableHttpResponse response = null;
+        
+        if(continueDownload)
+        {
+        	StringBuffer srange = new StringBuffer("bytes ");
+        	srange.append(f.length());
+        	srange.append("-");
+        	srange.append("/");
+        	srange.append(dataInfo.getLength());
+        	
+        	Header range = new BasicHeader("Content-Range", srange.toString());
+        	httpget.addHeader(range);
+        }
+        
         try
         {
             response = httpclient.execute(httpget, context);
