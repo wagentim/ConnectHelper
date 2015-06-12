@@ -1,28 +1,33 @@
 package cn.wagentim.connect.impl;
 
 import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
+import org.apache.http.NameValuePair;
 import org.apache.http.StatusLine;
 import org.apache.http.client.CookieStore;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicHeader;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,6 +53,9 @@ public class DefaultConnector implements IConnector
     private CloseableHttpClient httpclient = null;
     private CookieStore cookieStore = null;
     private Logger logger = LogManager.getLogger(DefaultConnector.class);
+    
+    private String login_username_key = "username";
+    private String login_password_key = "password";
 
     public DefaultConnector()
     {
@@ -117,6 +125,101 @@ public class DefaultConnector implements IConnector
         }
     }
     
+    /**
+     * Using User Name and Password to login a web page. 
+     * 
+     * @param url
+     * @param username
+     * @param password
+     * @return
+     */
+    public String postWithSimpleAuth(String url, String username, String password)
+    {
+    	if( Validator.isNullOrEmpty(url) )
+    	{
+    		logger.error("URL is NULL or Empty");
+    		return StringConstants.EMPTY_STRING;
+    	}
+    	
+    	if( Validator.isNullOrEmpty(username) )
+    	{
+    		logger.error("User name is NULL or Empty");
+    		return StringConstants.EMPTY_STRING;
+    	}
+    	
+    	if( Validator.isNullOrEmpty(password) )
+    	{
+    		logger.error("Password is NULL or Empty");
+    		return StringConstants.EMPTY_STRING;
+    	}
+    	
+    	URI uri = null;
+		
+    	try
+		{
+			uri = new URI(url);
+		} 
+		catch (URISyntaxException e1)
+		{
+			uri = null;
+			logger.error("GetPageContent#run Cannot create URI object");
+			return StringConstants.EMPTY_STRING;
+		}
+    	
+    	logger.info("Login the page: " + url);
+    	
+    	HttpPost httpPost = new HttpPost(uri);
+    	List <NameValuePair> nvps = new ArrayList <NameValuePair>();
+    	nvps.add(new BasicNameValuePair(login_username_key, username));
+    	nvps.add(new BasicNameValuePair(login_password_key, password));
+    	try
+		{
+			httpPost.setEntity(new UrlEncodedFormEntity(nvps));
+		} 
+    	catch (UnsupportedEncodingException e1)
+		{
+			e1.printStackTrace();
+		}
+    	CloseableHttpResponse response = null;
+        try
+        {
+            response = httpclient.execute(httpPost, context);
+            if( !isHttpResponseOk(response) )
+            {
+            	logger.error(response.getStatusLine().getReasonPhrase());
+            	return StringConstants.EMPTY_STRING;
+            }
+            
+            String pageContent = getPageContent(response);
+            EntityUtils.consume(response.getEntity());
+            
+            return pageContent;
+        }
+        catch ( IOException e )
+        {
+        	logger.error("Cannot get required web page!");
+        	return StringConstants.EMPTY_STRING;
+        }
+        
+        finally
+        {
+            try
+            {
+                response.close();
+            }
+            catch ( IOException e )
+            {
+            	logger.error("Close Response Error");
+            }
+        }
+    }
+    
+    /**
+     * Try to get the resource once and according to the header information create {@link DataInfo} to caching required informations
+     * 
+     * @param url
+     * @return
+     */
     public DataInfo getDataInfo(String url)
     {
     	if( Validator.isNullOrEmpty(url) )
@@ -451,6 +554,26 @@ public class DefaultConnector implements IConnector
 		HttpEntity entity = response.getEntity();
 		
 		return EntityUtils.toString(entity);
+	}
+
+	public String getLogin_username_key()
+	{
+		return login_username_key;
+	}
+
+	public void setLogin_username_key(String login_username_key)
+	{
+		this.login_username_key = login_username_key;
+	}
+
+	public String getLogin_password_key()
+	{
+		return login_password_key;
+	}
+
+	public void setLogin_password_key(String login_password_key)
+	{
+		this.login_password_key = login_password_key;
 	}
 
 }
